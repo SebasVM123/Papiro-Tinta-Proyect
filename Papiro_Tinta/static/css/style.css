@@ -1,0 +1,11 @@
+:root {
+    --brown: #5E3D2C;
+    --light-brown: #9B5A44;
+    --orange: #E29543;
+    --light-orange: #DCA552;
+    --beige: #D2BBAE;
+}
+
+h1 {
+    color: var(--brown);
+}
