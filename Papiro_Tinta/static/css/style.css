@@ -19,14 +19,12 @@
 
 * {
     font-family: 'Roboto', calibri;
+    font-size: 18px;
 }
 
-.title {
-    font-family: 'Oranienbaum', sans-serif;
-}
 
 /* global ------------------------------------------------*/
-/* imagen responsive*/
+/* imagen responsive */
 .image-container {
     width: 100%;
     max-width: 100%;
@@ -36,6 +34,22 @@
 .responsive-image {
     width: 100%;
     height: auto;
+}
+
+/* titulos */
+.title-1 {
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 50px;
+}
+
+.title-2 {
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 36px;
+}
+
+.title-3 {
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 25px;
 }
 
 /* header ------------------------------------------------*/
@@ -72,8 +86,10 @@ header {
     border-bottom: 2px solid black;
 }
 
-
-
+/* main --------------------------------------------*/
+#main-container .row {
+    border: 2px solid black;
+}
 
 
 
