@@ -26,17 +26,28 @@
 }
 
 /* global ------------------------------------------------*/
+/* imagen responsive*/
+.image-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
 
-
-/* estilos del navbar ------------------------------------*/
-.navbar-logo {
-    max-width: 100px;
+.responsive-image {
+    width: 100%;
     height: auto;
 }
 
+/* header ------------------------------------------------*/
+/* navbar */
 #navbar-header {
     border-bottom: 2px solid black;
     font-size: 20px;
+}
+
+.navbar-logo {
+    max-width: 100px;
+    height: auto;
 }
 
 #navbar-header ul {
@@ -46,5 +57,23 @@
 #login-icon {
     font-size: 30px;
 }
+
+/* bottom header */
+#bottom-navbar {
+    padding-top: 0.5rem;
+    border-bottom: 2px solid black;
+}
+
+#bottom-navbar h2 {
+    font-size: 25px;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+
+
+
 
 
