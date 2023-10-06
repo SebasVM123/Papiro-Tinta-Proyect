@@ -19,14 +19,12 @@
 
 * {
     font-family: 'Roboto', calibri;
+    font-size: 18px;
 }
 
-.title {
-    font-family: 'Oranienbaum', sans-serif;
-}
 
 /* global ------------------------------------------------*/
-/* imagen responsive*/
+/* imagen responsive */
 .image-container {
     width: 100%;
     max-width: 100%;
@@ -36,6 +34,31 @@
 .responsive-image {
     width: 100%;
     height: auto;
+}
+
+/* titulos */
+.title-1 {
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 50px;
+}
+
+.title-2 {
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 36px;
+}
+
+.title-3 {
+    font-family: 'Oranienbaum', sans-serif;
+    font-size: 25px;
+}
+
+/* estilos de texto */
+.bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-weight: italic;
 }
 
 /* header ------------------------------------------------*/
@@ -72,8 +95,27 @@ header {
     border-bottom: 2px solid black;
 }
 
+/* main --------------------------------------------*/
+#main-container .container {
+    border: 2px solid black;
+    padding: 12px;
+}
 
+#main-container #new-books p {
+    font-family: Oranienbaum;
+}
 
+#main-container #explore p {
+    margin-bottom: 5px;
+}
 
+#main-container #why-buy-with-us i {
+    font-size: 50px;
+}
+
+/* footer -------------------------------------------*/
+footer {
+    border-top: 2px solid black;
+}
 
 
