@@ -36,10 +36,10 @@
 		      </form>
 		      <ul class="navbar-nav d-flex align-items-center">
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Iniciar sesión</a>
+		          <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
 		        </li>
 			    <li class="nav-item" >
-		          <a class="nav-link" href="#"><i class="bi bi-person-circle" id="login-icon"></i></a>
+		          <a class="nav-link" href="{% url 'login' %}"><i class="bi bi-person-circle" id="login-icon"></i></a>
 		        </li>
 		      </ul>
 		    </div>
@@ -100,9 +100,9 @@
 			        </div>
 		        </div>
 		        <div class="row w-100 mt-3">
-			        <div class="dropdown">
-				        <a href="#">¿Ya tienes una cuenta?</a>
-				        <a href="#">Regístrate gratis</a>
+			        <div class="d-flex justify-content-start">
+				        <a class="me-2" href="{% url 'login' %}">¿Ya tienes una cuenta?   </a>
+				        <a href="{% url 'login' %}">Regístrate gratis</a>
 			        </div>
 		        </div>
             </div>

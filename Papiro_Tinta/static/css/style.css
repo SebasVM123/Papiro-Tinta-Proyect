@@ -101,6 +101,10 @@ header {
     padding: 12px;
 }
 
+#main-container #new-books p {
+    font-family: Oranienbaum;
+}
+
 #main-container #explore p {
     margin-bottom: 5px;
 }
