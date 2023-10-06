@@ -62,17 +62,59 @@
 	</header>
 	
 	<main>
-        <div class="d-flex flex-column align-items-center px-lg-5 mt-4" id="main-container">
-            <div class="d-flex flex-column align-items-center w-100 my-4">
+        <section class="px-lg-5" id="main-container">
+            <div class="container d-flex flex-column align-items-center w-100 my-4 text-center" id="new-books">
 	            <div class="row w-100">
-		            <h2 class="text-center title-2">NUEVOS LIBROS CADA SEMANA</h2>
-		            <p class="text-center title">Papiro & Tinta</p>
+		            <h2 class="title-2">NUEVOS LIBROS CADA SEMANA</h2>
+		            <p>Papiro & Tinta</p>
 	            </div>
             </div>
-	         <div class="d-flex flex-column align-items-center w-100 my-4">
-	            <div class="row w-100">hola</div>
+	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="explore">
+		        <div class="row w-100 text-center">
+			        <h2 class="title-2">EXPLORA</h2>
+		        </div>
+		        <div class="row w-100 text-left">
+			        <p>Busca tu libro preferido</p>
+		        </div>
+		        <div class="row w-100">
+			        <form class="d-flex" role="search">
+				        <input class="form-control me-2" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
+				        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+			        </form>
+		        </div>
+		        <div class="row w-100 my-3  text-center">
+			        <h2 class="title-2">Ó</h2>
+		        </div>
+		        <div class="row w-100 text-left">
+			        <p>Busca tu género favorito</p>
+		        </div>
+		        <div class="row w-100">
+			        <div class="dropdown">
+				        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					        selecciona el género...
+				        </button>
+				        <ul class="dropdown-menu">
+					        <li><a class="dropdown-item" href="#">Genero 1</a></li>
+					        <li><a class="dropdown-item" href="#">Genero 2</a></li>
+					        <li><a class="dropdown-item" href="#">Genero 3</a></li>
+				        </ul>
+			        </div>
+		        </div>
+		        <div class="row w-100 mt-3">
+			        <div class="dropdown">
+				        <a href="#">¿Ya tienes una cuenta?</a>
+				        <a href="#">Regístrate gratis</a>
+			        </div>
+		        </div>
             </div>
-        </div>
+	        
+	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="why-buy-with-us">
+		        <div class="row w-100 text-center">
+			        <h2 class="title-2">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
+		        </div>
+	        </div>
+	        
+        </section>
 	</main>
 	
 	<!-- JS Bootstrap -->
