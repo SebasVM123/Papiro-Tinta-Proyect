@@ -61,6 +61,10 @@
     font-weight: italic;
 }
 
+.custom-input {
+    border: 2px solid black;
+}
+
 /* header ------------------------------------------------*/
 /* navbar */
 #navbar-header {
@@ -118,4 +122,12 @@ footer {
     border-top: 2px solid black;
 }
 
+/* login */
+#login-box {
+    max-width: 400px;
+}
 
+#login-box form {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
