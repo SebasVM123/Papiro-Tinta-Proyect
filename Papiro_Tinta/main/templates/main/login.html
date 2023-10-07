@@ -32,11 +32,11 @@
 			        <form class="py-4" id="login-form" method="post">
 				        {% csrf_token %}
 				        <div class="form-floating mb-3">
-					        <input type="email" class="form-control custom-input" id="floatingInput" name="email" placeholder="name@example.com">
+					        <input type="email" class="form-control custom-input" id="floatingInput" name="email" placeholder="name@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">
 					        <label for="floatingInput">Correo electrónico</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="password" class="form-control custom-input" id="floatingPassword" name="password" placeholder="Password">
+					        <input type="password" class="form-control custom-input" id="floatingPassword" name="password" placeholder="Password" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número">
 					        <label for="floatingPassword">Contraseña</label>
 				        </div>
 				        <button type="submit" class="btn btn-primary mt-3 custom-button">Iniciar Sesión</button>
