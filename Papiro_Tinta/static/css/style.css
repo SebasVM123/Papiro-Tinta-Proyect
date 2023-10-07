@@ -1,9 +1,11 @@
 :root {
-    --brown: (193, 164, 117);
-    --salmon: (255, 97, 98);
-    --black: (35, 35, 35);
-    --gray: (134, 145, 148);
-    --white: (255, 255, 255);
+    --brown: #C1A475;
+    --salmon: #FF6162;
+    --black: #000000;
+    --gray: #869194;
+    --white: #FFFFFF;
+
+    --salmon-light: #FF8E8F;
 }
 
 /* fuentes -----------------------------------------------*/
@@ -63,6 +65,23 @@
 
 .custom-input {
     border: 2px solid black;
+}
+
+.custom-button {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: var(--salmon);
+    color: var(--black);
+}
+
+.custom-button:hover {
+    border: 1px solid black;
+    background-color: var(--salmon-light);
+    color: var(--black);
+}
+
+.custom-link {
+
 }
 
 /* header ------------------------------------------------*/
