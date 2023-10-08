@@ -174,7 +174,7 @@ footer {
 }
 
 #login-box {
-    max-width: 400px;
+    min-width: 400px;
 }
 
 #login-box form {
