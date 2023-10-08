@@ -5,13 +5,13 @@
 	<!-- Metadata -->
 	<meta charset="UTF-8">
 	<meta name="author" content="Sebastian Velasquez">
-	<meta name="description" content="Login del sitio web de Papiro&Tinta">
+	<meta name="description" content="Log-in del sitio web de Papiro&Tinta">
 	<meta name="keywords" content="libreria, librería, libros online">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Titulo -->
-	<title>Papiro&Tinta | Iniciar Sesión</title>
+	<title>Iniciar Sesión | Papiro & Tinta</title>
 	<!-- favicon -->
-	
+	<link rel="icon" href="{% static 'assets/favicon.png' %}" type="image/png">
 	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<!-- CSS -->
@@ -32,16 +32,16 @@
 			        <form class="py-4" id="login-form" method="post">
 				        {% csrf_token %}
 				        <div class="form-floating mb-3">
-					        <input type="email" class="form-control custom-input" id="floatingInput" name="email" placeholder="name@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">
+					        <input type="email" class="form-control custom-input-b" id="floatingInput" name="email" placeholder="name@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">
 					        <label for="floatingInput">Correo electrónico</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="password" class="form-control custom-input" id="floatingPassword" name="password" placeholder="Password" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número">
+					        <input type="password" class="form-control custom-input-b" id="floatingPassword" name="password" placeholder="Password" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número">
 					        <label for="floatingPassword">Contraseña</label>
 				        </div>
 				        <button type="submit" class="btn btn-primary mt-3 custom-button">Iniciar Sesión</button>
 			        </form>
-			        <p class="mt-2">¿No tienes una cuenta? <a href="#" class="mt-2 custom-link">Regístrate gratis</a></p>
+			        <p class="mt-2">¿No tienes una cuenta? <a href="{% url 'register_url' %}" class="mt-2 custom-link">Regístrate gratis</a></p>
 				</div>
 				<div class="col col-2 d-none d-sm-none d-md-block align-self-end">
 	                <div class="image-container">

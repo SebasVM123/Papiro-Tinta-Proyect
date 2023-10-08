@@ -65,8 +65,20 @@
     font-weight: italic;
 }
 
-.custom-input {
+.custom-input-b {
     border: 2px solid black;
+}
+
+.custom-input-bb {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+}
+
+.custom-input-b:focus, .custom-input-bb:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--salmon) !important;
 }
 
 .custom-button {
@@ -166,6 +178,16 @@ footer {
 }
 
 #login-box form {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* registrarse --------------------------------*/
+#signup-container .row .col {
+    min-width: 150px;
+}
+
+#signup-box form {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
