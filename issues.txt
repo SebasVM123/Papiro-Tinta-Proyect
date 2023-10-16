@@ -1,0 +1,2 @@
+iss1: el texto de los inputs se puede seleccionar, cuando no deberia
+iss2: el separador del form de registro es igual que el separador de cada input, hacerlo mas grande
