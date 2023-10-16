@@ -77,6 +77,130 @@
 			        </form>
 			        <p class="mt-2">Ya tienes una cuenta? <a href="{% url 'login_url' %}" class="mt-2 custom-link">Inicia Sesión</a></p>
 				</div>
+
+				<script>
+					 
+		document.addEventListener("DOMContentLoaded", function() {
+        const nameInput = document.getElementById("floatingName");
+		const apellidoInput = document.getElementById("floatingLastName")
+		const correoInput = document.getElementById("floatingEmail")
+		const passwordInput = document.getElementById("floatingPassword")
+		const direccionInput = document.getElementById("floatingAddress")
+		const ciudadInput = document.getElementById("floatingCity")
+		const estadoInput = document.getElementById("floatingProvince")
+		const paisInput = document.getElementById("floatingCountry")
+
+		const birthdateInput = document.getElementById("floatingBirthdate")
+				
+        nameInput.addEventListener("blur", function() {
+            const inputValue = nameInput.value;
+		
+            if (inputValue.length < 2) {
+				alert("El nombre debe tener al menos 2 caracteres.");
+				nameInput.value = "";
+            } else if (inputValue.length >= 100) {
+				alert("El nombre tiene que ser más corto.")
+				nameInput.value = "";
+
+            }
+			
+        });
+
+		apellidoInput.addEventListener("blur", function(){
+			const valueApellido=apellidoInput.value;
+			if(valueApellido.length < 2){
+				alert("El apellido debe tener al menos 2 caracteres.");
+				apellidoInput.value = "";
+			} else if ( valueApellido.length >= 100){
+				alert("El apellido tiene que ser más corto.")
+				apellidoInput.value = "";
+			}
+		})
+
+
+		birthdateInput.addEventListener("blur", function(){
+			const birthdate= new Date(birthdateInput.value);
+			const today = new Date();
+			const oneDayAgo = new Date(today);
+			oneDayAgo.setDate(today.getDate() - 1);
+			const minAgeDate = new Date(today);
+			minAgeDate.setFullYear(today.getFullYear() - 15);
+
+		
+			if (birthdate >= today){
+				alert("La fecha de nacimiento no puede ser en el futuro");
+				birthdateInput.value="";
+
+			} else if(birthdate >= today || birthdate >= minAgeDate){
+				alert("Debes ser mayor de 15 años para registrarte.");
+            	birthdateInput.value = ""; 
+			}
+			
+		})
+	
+		passwordInput.addEventListener("blur", function(){
+			const valuepassword=passwordInput.value;
+			if(valuepassword.length < 8){
+				alert("La contraseña debe tener al menos 8 caracteres.");
+				passwordInput.value = "";
+			} else if ( valuepassword.length >= 50){
+				alert("La contraseña tiene que ser más corta.")
+				passwordInput.value = "";
+			}
+		})
+
+
+		direccionInput.addEventListener("blur", function(){
+			const valueDireccion=direccionInput.value;
+			if(valueDireccion.length < 6){
+				alert("La direccion debe tener al menos 6 caracteres.");
+				direccionInput.value = "";
+
+			} else if ( valueDireccion.length >= 50){
+				alert("La direccion tiene que ser más corta.")
+				direccionInput.value = "";
+			}
+		})
+
+
+		ciudadInput.addEventListener("blur", function(){
+			const valueCiudad=ciudadInput.value;
+			if(valueCiudad.length < 4){
+				alert("El nombre de la ciduad debe tener al menos 6 caracteres.");
+				ciudadInput.value = "";
+			} else if ( valueCiudad.length >= 50){
+				alert("El nombre de la ciudad tiene que ser más corto.")
+				ciudadInput.value = "";
+			}
+		})
+
+
+		estadoInput.addEventListener("blur", function(){
+			const valueEstado=estadoInput.value;
+			if(valueEstado.length < 4){
+				alert("El nombre del estado debe tener al menos 6 caracteres.");
+				estadoInput.value = "";
+			} else if ( valueEstado.length >= 50){
+				alert("El nombre del estado tiene que ser más corto.")
+				estadoInput.value = "";
+			}
+		})
+
+		paisInput.addEventListener("blur", function(){
+			const valuePais=paisInput.value;
+			if(valuePais.length < 5){
+				alert("El nombre del pais debe tener al menos 6 caracteres.");
+				paisInput.value = "";
+			} else if ( valuePais.length >= 50){
+				alert("El nombre del pais tiene que ser más corto.")
+				paisInput.value = "";
+			}
+		})
+
+    });
+
+				</script>
+
 				<div class="col col-2 d-none d-sm-none d-md-block align-self-end">
 					<div class="image-container">
 		                <img src="{% static 'assets/images/flower-r.png' %}" alt="Imagen de una flor" class="responsive-image">
