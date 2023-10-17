@@ -31,7 +31,7 @@
 				<div class="col-md-auto align-self-center" id="signup-box">
 					<h1 class="title-1">Registrarse</h1>
 					<h2 class="title-3">Papiro & Tinta</h2>
-			        <form class="py-4" id="login-form" method="post">
+			        <form class="py-4 t-bordered b-bordered" id="register-form" method="post">
 				        {% csrf_token %}
 				        <div class="form-floating">
 					        <input type="text" class="form-control custom-input-bb" id="floatingDNI" name="dni" placeholder="identificación" required pattern="\d{3,20}" title="El número de identificación solo debe estar compuesto de números, sin espacios y tener una longitud de entre 3 y 20 caracteres">
