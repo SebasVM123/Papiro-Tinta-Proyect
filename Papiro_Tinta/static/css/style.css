@@ -26,6 +26,14 @@
     font-size: 18px;
 }
 
+.title-font {
+    font-family: 'Oranienbaum', sans-serif;
+}
+
+.normal-font {
+    font-family: 'Roboto', calibri;
+}
+
 
 /* global ------------------------------------------------*/
 /* imagen responsive */
@@ -40,7 +48,7 @@
     height: auto;
 }
 
-/* titulos */
+/* texto */
 .title-1 {
     font-family: 'Oranienbaum', sans-serif;
     font-size: 50px;
@@ -56,6 +64,10 @@
     font-size: 25px;
 }
 
+.large-text {
+    font-size: 20px;
+}
+
 /* estilos de texto */
 .bold-text {
     font-weight: bold;
@@ -65,11 +77,13 @@
     font-weight: italic;
 }
 
-.custom-input-b {
+/* inputs */
+
+.custom-input-b { /* border */
     border: 2px solid black;
 }
 
-.custom-input-bb {
+.custom-input-bb { /* border-bottom */
     border: none;
     border-bottom: 2px solid black;
     border-radius: 0;
@@ -81,6 +95,7 @@
     border-color: var(--salmon) !important;
 }
 
+/* buttons */
 .custom-button {
     border: 1px solid black;
     border-radius: 0;
@@ -107,65 +122,43 @@
     box-shadow: 0 0 0 0.25rem var(--salmon-shadow);
 }
 
+/* links */
 .custom-link {
     color: var(--black);
 }
 
+/* borders */
+.bordered {
+    border: 2px solid black;
+}
+
+.b-bordered {
+    border-bottom: 2px solid black;
+}
+
+.t-bordered {
+    border-top: 2px solid black;
+}
+
 /* header ------------------------------------------------*/
 /* navbar */
-#navbar-header {
-    border-bottom: 2px solid black;
-    font-size: 20px;
-}
-
-.navbar-logo {
+#navbar-logo {
     max-width: 100px;
     height: auto;
-}
-
-#navbar-header ul {
-    margin-left: 50px;
 }
 
 #login-icon {
     font-size: 30px;
 }
 
-/* bottom header */
-#bottom-navbar {
-    padding-top: 0.5rem;
-    border-bottom: 2px solid black;
-}
-
-#bottom-navbar h2 {
-    font-size: 25px;
-}
-
-header {
-    border-bottom: 2px solid black;
-}
-
-/* main --------------------------------------------*/
+/* main --------------------------------------------------*/
 #main-container .container {
     border: 2px solid black;
     padding: 12px;
 }
 
-#main-container #new-books p {
-    font-family: Oranienbaum;
-}
-
-#main-container #explore p {
-    margin-bottom: 5px;
-}
-
 #main-container #why-buy-with-us i {
     font-size: 50px;
-}
-
-/* footer -------------------------------------------*/
-footer {
-    border-top: 2px solid black;
 }
 
 /* login ------------------------------------------*/
@@ -177,17 +170,7 @@ footer {
     max-width: 400px;
 }
 
-#login-box form {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
-
-/* registrarse --------------------------------*/
+/* registrarse ------------------------------------*/
 #signup-container .row .col {
     min-width: 150px;
-}
-
-#signup-box form {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
 }

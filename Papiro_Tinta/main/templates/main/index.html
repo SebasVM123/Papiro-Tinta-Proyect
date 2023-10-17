@@ -20,14 +20,14 @@
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-md px-lg-5" id="navbar-header">
+	<header class="b-bordered">
+		<nav class="navbar navbar-expand-md px-lg-5 b-bordered">
 		  <div class="container-fluid">
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
 			<a class="navbar-brand" href="#">
-				<img class="img-fluid navbar-logo" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta">
+				<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="navbar-logo">
 			</a>
 		    <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
 			  <form class="d-flex" role="search">
@@ -46,7 +46,7 @@
 		  </div>
 	    </nav>
 		
-		<div class="container-fluid d-flex justify-content-center align-items-center" id="bottom-navbar">
+		<div class="container-fluid d-flex justify-content-center align-items-center pt-2 b-bordered">
 			<h2 class="text-center title-2">ENVÍOS GRATIS A CUALQUIER PARTE DEL MUNDO</h2>
 		</div>
 		
@@ -65,7 +65,7 @@
             <div class="container d-flex flex-column align-items-center w-100 my-4 text-center" id="new-books">
 	            <div class="row w-100">
 		            <h2 class="title-2">NUEVOS LIBROS CADA SEMANA</h2>
-		            <p>Papiro & Tinta</p>
+		            <p class="title-3">Papiro & Tinta</p>
 	            </div>
             </div>
 	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="explore">
@@ -73,7 +73,7 @@
 			        <h2 class="title-2">EXPLORA</h2>
 		        </div>
 		        <div class="row w-100 text-left">
-			        <p>Busca tu libro preferido</p>
+			        <p class="mb-1">Busca tu libro preferido</p>
 		        </div>
 		        <div class="row w-100">
 			        <form class="d-flex" role="search">
@@ -102,7 +102,7 @@
 		        <div class="row w-100 mt-3">
 			        <div class="d-flex justify-content-start">
 				        <p class="me-2">¿Ya tienes una cuenta?</p>
-				        <a class="custom-link" href="{% url 'register_url' %}">Regístrate aqui</a>
+				        <a class="custom-link" href="{% url 'register_url' %}">Regístrate aquí</a>
 			        </div>
 		        </div>
             </div>
@@ -151,11 +151,12 @@
 			</div>
 	</main>
 	
-	<footer class="container-fluid d-flex flex-column align-items-center mt-5">
+	<footer class="container-fluid d-flex flex-column align-items-center mt-5 t-bordered b-bordered">
 			<div class="row w-100" id="top-footer">
 				<h2 class="title-2 text-center">Papiro & Tinta</h2>
 				<p class="text-center">La magia en cada página</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
