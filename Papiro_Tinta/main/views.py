@@ -1,18 +1,30 @@
-#from django.shortcuts import render, redirect
-#from .forms import MiModeloForm
 from django.shortcuts import render, redirect
 from .forms import MiModeloForm
 from .models import cliente  # Asegúrate de importar el modelo
 from django.utils import timezone
-
-
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+#from django.shortcuts import render, redirect
+#from .forms import MiModeloForm
 
 # Create your views here.
 def index_view(request):
     return render(request, 'main/index.html')
 
 def login_view(request):
-    return render(request, 'main/login.html')
+    if request.method == "POST":
+        email = request.POST['email']
+        password = request.POST['password']
+        user = authenticate(request, email=email, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('index')
+        else:
+            messages.success(request, ('No se pudo iniciar sesion, por favor vuelve a intentar'))
+            return redirect('login_url')
+            # Return an 'invalid login' error message.
+    else:
+        return render(request, 'main/login.html')
 
 def register_view(request):
     return render(request, 'main/register.html')
@@ -24,7 +36,7 @@ def crear_registro(request):
             nuevo_cliente = form.save(commit=False)  # No guardes todavía
             nuevo_cliente.fecha_registro = timezone.now()  # Establece la fecha de registro
             nuevo_cliente.save()  # Ahora guarda la instancia
-            return redirect('index')
+            return redirect('login_url')
     else:
         form = MiModeloForm()
     return render(request, 'main/register.html', {'form': form})
