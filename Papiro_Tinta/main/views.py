@@ -12,6 +12,9 @@ from django.contrib.auth.models import User
 def index_view(request):
     return render(request, 'main/index.html')
 
+def home(request):
+    return render(request, 'main/home.html')
+
 def login_view(request):
     if request.method == "POST":
         email = request.POST['email']
@@ -20,12 +23,19 @@ def login_view(request):
         
         if auth_user is not None:
             login(request, auth_user)
-            return redirect('index')
+            if auth_user.is_superuser:
+                return redirect('/admin/')  # Redirige al dashboard del administrador
+            else:
+                return redirect('home')
         else:
             messages.error(request, 'No se pudo iniciar sesión, por favor vuelve a intentar.')  # Cambia a messages.error
             return redirect('login_url')
     else:
         return render(request, 'main/login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login_url')
 
 def register_view(request):
     return render(request, 'main/register.html')
