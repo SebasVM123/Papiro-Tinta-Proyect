@@ -13,7 +13,7 @@ class cliente(models.Model):
     provincia = models.CharField(max_length=50)
     pais = models.CharField(max_length=50)
 
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     fecha_registro = models.DateField()
 
     def __str__(self):
