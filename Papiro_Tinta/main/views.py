@@ -35,7 +35,11 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login_url')
+    return redirect('index')
+
+def custom_admin_logout(request):
+    logout(request)
+    return redirect('index')
 
 def register_view(request):
     return render(request, 'main/register.html')

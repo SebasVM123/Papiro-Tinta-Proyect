@@ -1,5 +1,7 @@
 from django.urls import path, include
 from django.views.generic import RedirectView
+from django.contrib import admin
+from .views import custom_admin_logout
 
 from . import views
 #from .views import crear_registro
@@ -12,4 +14,6 @@ urlpatterns = [
     path('crear-registro/', views.crear_registro, name='crear_registro'),
     path('home/', views.home, name='home'),
     path('logout/', views.logout_view, name='logout_url'),
+    path('admin/logout/', custom_admin_logout, name='custom_admin_logout'),
+    path('admin/', admin.site.urls),
 ]
