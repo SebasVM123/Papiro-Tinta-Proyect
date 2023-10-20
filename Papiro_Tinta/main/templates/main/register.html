@@ -31,22 +31,22 @@
 				<div class="col-md-auto align-self-center" id="signup-box">
 					<h1 class="title-1">Registrarse</h1>
 					<h2 class="title-3">Papiro & Tinta</h2>
-			        <form class="py-4 t-bordered b-bordered" id="register-form" method="post">
+			        <form class="py-4 t-bordered b-bordered" id="register-form" method="post" action="{% url 'crear_registro' %}">
 				        {% csrf_token %}
 				        <div class="form-floating">
 					        <input type="text" class="form-control custom-input-bb" id="floatingDNI" name="dni" placeholder="identificación" required pattern="\d{3,20}" title="El número de identificación solo debe estar compuesto de números, sin espacios y tener una longitud de entre 3 y 20 caracteres">
 					        <label for="floatingDNI">Identificación</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="text" class="form-control custom-input-bb" id="floatingName" name="name" placeholder="nombre" required pattern="([a-zA-Z]*\s?){1,2}" title="El nombre solo debe estar compuesto de letras y son admitidos máximo 2 nombres">
+					        <input type="text" class="form-control custom-input-bb" id="floatingName" name="nombre" placeholder="nombre" required pattern="([a-zA-Z]*\s?){1,2}" title="El nombre solo debe estar compuesto de letras y son admitidos máximo 2 nombres">
 					        <label for="floatingName">Nombre</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="text" class="form-control custom-input-bb" id="floatingLastName" name="lastname" placeholder="apellido(s)" required pattern="([a-zA-Z]*\s?){1,2}" title="El apellido solo debe estar compuesto de letras y son admitidos máximo 2 apellidos">
+					        <input type="text" class="form-control custom-input-bb" id="floatingLastName" name="apellido" placeholder="apellido(s)" required pattern="([a-zA-Z]*\s?){1,2}" title="El apellido solo debe estar compuesto de letras y son admitidos máximo 2 apellidos">
 					        <label for="floatingLastName">Apellido(s)</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="date" class="form-control custom-input-bb" id="floatingBirthdate" name="birthdate" placeholder="fecha de nacimiento" required>
+					        <input type="date" class="form-control custom-input-bb" id="floatingBirthdate" name="fecha_nacimiento" placeholder="fecha de nacimiento" required>
 					        <label for="floatingBirthdate">Fecha de nacimiento</label>
 				        </div>
 				        <div class="form-floating">
@@ -54,23 +54,23 @@
 					        <label for="floatingEmail">Correo electrónico</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="password" class="form-control custom-input-bb" id="floatingPassword" name="password" placeholder="contraseña" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número.">
+					        <input type="password" class="form-control custom-input-bb" id="floatingPassword" name="contraseña" placeholder="contraseña" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número.">
 					        <label for="floatingPassword">Contraseña</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="text" class="form-control custom-input-bb" id="floatingAddress" name="address" placeholder="dirección de residencia" required>
+					        <input type="text" class="form-control custom-input-bb" id="floatingAddress" name="direccion" placeholder="dirección de residencia" required>
 					        <label for="floatingAddress">Dirección de residencia</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="text" class="form-control custom-input-bb" id="floatingCity" name="city" placeholder="ciudad de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
+					        <input type="text" class="form-control custom-input-bb" id="floatingCity" name="ciudad" placeholder="ciudad de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
 					        <label for="floatingCity">Ciudad</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="text" class="form-control custom-input-bb" id="floatingProvince" name="province" placeholder="estado/departamento/provincia de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
+					        <input type="text" class="form-control custom-input-bb" id="floatingProvince" name="provincia" placeholder="estado/departamento/provincia de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
 					        <label for="floatingProvince">Estado/departamento/provincia</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="text" class="form-control custom-input-bb" id="floatingCountry" name="country" placeholder="país de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
+					        <input type="text" class="form-control custom-input-bb" id="floatingCountry" name="pais" placeholder="país de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
 					        <label for="floatingProvince">País</label>
 				        </div>
 				        <button type="submit" class="btn btn-primary mt-3 custom-button">Registrarse</button>
