@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+	<!-- Metadata -->
+	<meta charset="UTF-8">
+	<meta name="author" content="Sebastian Velasquez">
+	<meta name="description" content="Sign-up del sitio web de Papiro&Tinta">
+	<meta name="keywords" content="libreria, librería, libros online">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Titulo -->
+	<title>Registrarse | Papiro & Tinta</title>
+	<!-- favicon -->
+	<link rel="icon" href="{% static 'assets/favicon.png' %}" type="image/png">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<!-- CSS -->
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<!-- SCRIPTS -->
+	<link href="{% static 'scripts/scripts.js' %}">
+</head>
+<body>
+	<main class="my-5 py-5">
+		<div class="container d-flex justify-content-center align-items-center" id="signup-container">
+			<div class="row justify-content-center">
+				<div class="col col-2 d-none d-sm-none d-md-block align-self-start">
+					<div class="image-container">
+		                <img src="{% static 'assets/images/flower.png' %}" alt="Imagen de una flor" class="responsive-image">
+	                </div>
+				</div>
+				<div class="col-md-auto align-self-center" id="signup-box">
+					<h1 class="title-1">Registrarse</h1>
+					<h2 class="title-3">Papiro & Tinta</h2>
+			        <form class="py-4 t-bordered b-bordered" id="register-form" method="post" action="{% url 'crear_registro' %}">
+				        {% csrf_token %}
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingDNI" name="dni" placeholder="identificación" required pattern="\d{3,20}" title="El número de identificación solo debe estar compuesto de números, sin espacios y tener una longitud de entre 3 y 20 caracteres">
+					        <label for="floatingDNI">Identificación</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingName" name="nombre" placeholder="nombre" required pattern="([a-zA-Z]*\s?){1,2}" title="El nombre solo debe estar compuesto de letras y son admitidos máximo 2 nombres">
+					        <label for="floatingName">Nombre</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingLastName" name="apellido" placeholder="apellido(s)" required pattern="([a-zA-Z]*\s?){1,2}" title="El apellido solo debe estar compuesto de letras y son admitidos máximo 2 apellidos">
+					        <label for="floatingLastName">Apellido(s)</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="date" class="form-control custom-input-bb" id="floatingBirthdate" name="fecha_nacimiento" placeholder="fecha de nacimiento" required>
+					        <label for="floatingBirthdate">Fecha de nacimiento</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="email" class="form-control custom-input-bb" id="floatingEmail" name="email" placeholder="name@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">
+					        <label for="floatingEmail">Correo electrónico</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="password" class="form-control custom-input-bb" id="floatingPassword" name="contraseña" placeholder="contraseña" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número.">
+					        <label for="floatingPassword">Contraseña</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingAddress" name="direccion" placeholder="dirección de residencia" required>
+					        <label for="floatingAddress">Dirección de residencia</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingCity" name="ciudad" placeholder="ciudad de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
+					        <label for="floatingCity">Ciudad</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingProvince" name="provincia" placeholder="estado/departamento/provincia de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
+					        <label for="floatingProvince">Estado/departamento/provincia</label>
+				        </div>
+				        <div class="form-floating">
+					        <input type="text" class="form-control custom-input-bb" id="floatingCountry" name="pais" placeholder="país de residencia" required pattern="([a-zA-Z]*\s?)*" title="Solo se aceptan letras en este campo">
+					        <label for="floatingProvince">País</label>
+				        </div>
+				        <button type="submit" class="btn btn-primary mt-3 custom-button">Registrarse</button>
+			        </form>
+			        <p class="mt-2">Ya tienes una cuenta? <a href="{% url 'login_url' %}" class="mt-2 custom-link">Inicia Sesión</a></p>
+				</div>
+
+				<script>
+
+
+	document.addEventListener("DOMContentLoaded", function() {
+            const formulario = document.getElementById("login-form");
+            const nombreInput = document.getElementById("floatingName");
+			const apellidoInput = document.getElementById("floatingLastName")
+			const direccionInput = document.getElementById("floatingAddress")
+			const ciudadInput = document.getElementById("floatingCity")
+			const estadoInput = document.getElementById("floatingProvince")
+			const paisInput = document.getElementById("floatingCountry")
+            
+
+            formulario.addEventListener("submit", function(event) {
+                if (nombreInput.value.length < 2) {
+                    alert("El nombre debe tener al menos 2 caracteres.");
+                    event.preventDefault(); 
+                } else if(nombreInput.value.length >= 100){
+					alert("El nombre debe ser mas corto");
+                    event.preventDefault();
+
+				}
+
+                if (apellidoInput.value.length < 2) {
+                    alert("El apellido debe tener al menos 2 caracteres.");
+                    event.preventDefault();
+                } else if(apellidoInput.value.length >= 100){
+					alert("El apellido debe ser mas corto");
+                    event.preventDefault();
+
+				}
+
+				if (direccionInput.value.length < 6){
+					alert("La direccion debe tener al menos 6 caracteres.");
+					event.preventDefault();
+				} else if(direccionInput.value.length >= 50){
+					alert("La direccion tiene que ser mas corta");
+                    event.preventDefault();
+				}
+
+				if(ciudadInput.value.length < 4){
+					alert("El nombre de la ciduad debe tener al menos 6 caracteres.");
+					event.preventDefault();
+				} else if(ciudadInput.value.length >= 50){
+					alert("El nombre de la ciudad debe ser mas corto");
+                    event.preventDefault();
+				}
+
+				if(estadoInput.value.length < 4){
+					alert("El nombre del estado debe tener al menos 6 caracteres.");
+					event.preventDefault();
+				} else if(estadoInput.value.length >= 50){
+					alert("El nombre del estado debe ser mas corto");
+                    event.preventDefault();
+				}
+				
+				if(paisInput.value.length < 5){
+					alert("El nombre del pais debe tener al menos 6 caracteres.");
+					event.preventDefault();
+				}else if(paisInput.value.length >= 50){
+					alert("El nombre del pais debe ser mas corto");
+                    event.preventDefault();
+				}
+            });
+        });
+
+	const birthdateInput = document.getElementById("floatingBirthdate"); 
+
+	birthdateInput.addEventListener("blur", function() {
+	const birthdate = new Date(birthdateInput.value);
+	const today = new Date();
+	const oneDayAgo = new Date(today);
+	oneDayAgo.setDate(today.getDate() - 1);
+	const minAgeDate = new Date(today);
+	minAgeDate.setFullYear(today.getFullYear() - 15);
+
+	if (birthdate >= today) {
+		alert("La fecha de nacimiento no puede ser en el futuro");
+		birthdateInput.value = ""; // Limpia el campo de fecha de nacimiento.
+	} else if (birthdate == today) {
+		alert("La fecha de nacimiento no puede ser la fecha actual");
+		birthdateInput.value = "";
+	} else if (birthdate > oneDayAgo || birthdate >= minAgeDate) {
+		alert("Debes ser mayor de 15 años para registrarte.");
+		birthdateInput.value = "";
+	}
+	});
+
+
+		
+				</script>
+
+				<div class="col col-2 d-none d-sm-none d-md-block align-self-end">
+					<div class="image-container">
+		                <img src="{% static 'assets/images/flower-r.png' %}" alt="Imagen de una flor" class="responsive-image">
+	                </div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<!-- JS Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

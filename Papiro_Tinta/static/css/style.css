@@ -1,9 +1,13 @@
 :root {
-    --brown: (193, 164, 117);
-    --salmon: (255, 97, 98);
-    --black: (35, 35, 35);
-    --gray: (134, 145, 148);
-    --white: (255, 255, 255);
+    --brown: #C1A475;
+    --salmon: #FF6162;
+    --black: #000000;
+    --gray: #869194;
+    --white: #FFFFFF;
+
+    --salmon-light: #FF8E8F;
+
+    --salmon-shadow: rgba(255, 97, 98, 0.5)
 }
 
 /* fuentes -----------------------------------------------*/
@@ -22,6 +26,14 @@
     font-size: 18px;
 }
 
+.title-font {
+    font-family: 'Oranienbaum', sans-serif;
+}
+
+.normal-font {
+    font-family: 'Roboto', calibri;
+}
+
 
 /* global ------------------------------------------------*/
 /* imagen responsive */
@@ -36,7 +48,7 @@
     height: auto;
 }
 
-/* titulos */
+/* texto */
 .title-1 {
     font-family: 'Oranienbaum', sans-serif;
     font-size: 50px;
@@ -52,6 +64,10 @@
     font-size: 25px;
 }
 
+.large-text {
+    font-size: 20px;
+}
+
 /* estilos de texto */
 .bold-text {
     font-weight: bold;
@@ -61,61 +77,100 @@
     font-weight: italic;
 }
 
+/* inputs */
+
+.custom-input-b { /* border */
+    border: 2px solid black;
+}
+
+.custom-input-bb { /* border-bottom */
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+}
+
+.custom-input-b:focus, .custom-input-bb:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--salmon) !important;
+}
+
+/* buttons */
+.custom-button {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: var(--salmon);
+    color: var(--black);
+}
+
+.custom-button:hover {
+    border: 1px solid black;
+    background-color: var(--salmon-light);
+    color: var(--black);
+}
+
+.custom-button:active {
+    border: 1px solid black !important;
+    background-color: var(--salmon-light) !important;
+    color: var(--black) !important;
+}
+
+.custom-button:focus-visible {
+    border: 1px solid black;
+    background-color: var(--salmon);
+    color: var(--black);
+    box-shadow: 0 0 0 0.25rem var(--salmon-shadow);
+}
+
+/* links */
+.custom-link {
+    color: var(--black);
+}
+
+/* borders */
+.bordered {
+    border: 2px solid black;
+}
+
+.b-bordered {
+    border-bottom: 2px solid black;
+}
+
+.t-bordered {
+    border-top: 2px solid black;
+}
+
 /* header ------------------------------------------------*/
 /* navbar */
-#navbar-header {
-    border-bottom: 2px solid black;
-    font-size: 20px;
-}
-
-.navbar-logo {
+#navbar-logo {
     max-width: 100px;
     height: auto;
-}
-
-#navbar-header ul {
-    margin-left: 50px;
 }
 
 #login-icon {
     font-size: 30px;
 }
 
-/* bottom header */
-#bottom-navbar {
-    padding-top: 0.5rem;
-    border-bottom: 2px solid black;
-}
-
-#bottom-navbar h2 {
-    font-size: 25px;
-}
-
-header {
-    border-bottom: 2px solid black;
-}
-
-/* main --------------------------------------------*/
+/* main --------------------------------------------------*/
 #main-container .container {
     border: 2px solid black;
     padding: 12px;
-}
-
-#main-container #new-books p {
-    font-family: Oranienbaum;
-}
-
-#main-container #explore p {
-    margin-bottom: 5px;
 }
 
 #main-container #why-buy-with-us i {
     font-size: 50px;
 }
 
-/* footer -------------------------------------------*/
-footer {
-    border-top: 2px solid black;
+/* login ------------------------------------------*/
+#login-container .row .col {
+    min-width: 150px;
 }
 
+#login-box {
+    max-width: 400px;
+}
 
+/* registrarse ------------------------------------*/
+#signup-container .row .col {
+    min-width: 150px;
+}
