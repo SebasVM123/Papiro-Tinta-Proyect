@@ -16,12 +16,19 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<!-- CSS -->
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 	<!-- SCRIPTS -->
 	<link href="{% static 'scripts/scripts.js' %}">
 </head>
 <body>
+	<header class="floating px-5">
+		<a href="{% url 'index' %}">
+			<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="navbar-logo">
+		</a>
+	</header>
 	<main class="my-5 py-5">
-		<div class="container d-flex justify-content-center align-items-center" id="signup-container">
+		<div class="container d-flex align-items-center" id="signup-container">
 			<div class="row justify-content-center">
 				<div class="col col-2 d-none d-sm-none d-md-block align-self-start">
 					<div class="image-container">
@@ -76,6 +83,7 @@
 				        <button type="submit" class="btn btn-primary mt-3 custom-button">Registrarse</button>
 			        </form>
 			        <p class="mt-2">Ya tienes una cuenta? <a href="{% url 'login_url' %}" class="mt-2 custom-link">Inicia Sesión</a></p>
+					<a href="{% url 'index' %}" class="custom-link"><i class="bi bi-house title-3"></i></a><i class="bi bi-arrow-return-left title-3"></i>
 				</div>
 
 				<script>
