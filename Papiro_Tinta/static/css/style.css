@@ -144,11 +144,9 @@
     border-top: 2px solid black;
 }
 
-.floating {
-    position: fixed;
+.smooth-radius {
+    border-radius: 2px;
 }
-
-
 
 /* header ------------------------------------------------*/
 /* navbar */
