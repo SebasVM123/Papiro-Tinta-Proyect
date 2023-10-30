@@ -127,6 +127,10 @@
     color: var(--black);
 }
 
+.custom-link:active {
+    background-color: var(--salmon-light);
+}
+
 /* borders */
 .bordered {
     border: 2px solid black;
@@ -144,6 +148,8 @@
     position: fixed;
 }
 
+
+
 /* header ------------------------------------------------*/
 /* navbar */
 #navbar-logo {
@@ -151,7 +157,7 @@
     height: auto;
 }
 
-#login-icon {
+#dropdown-login {
     font-size: 30px;
 }
 

@@ -22,28 +22,28 @@
 <body>
 	<header class="b-bordered">
 		<nav class="navbar navbar-expand-md px-lg-5 b-bordered">
-		  <div class="container-fluid">
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-			<a class="navbar-brand" href="#">
-				<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="navbar-logo">
-			</a>
-		    <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
-			  <form class="d-flex" role="search">
-		        <input class="form-control me-2" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
-		        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-		      </form>
-		      <ul class="navbar-nav d-flex align-items-center">
-		        <li class="nav-item">
-		          <a class="nav-link" href="{% url 'login_url' %}">Iniciar sesión</a>
-		        </li>
-			    <li class="nav-item" >
-		          <a class="nav-link" href="{% url 'login_url' %}"><i class="bi bi-person-circle" id="login-icon"></i></a>
-		        </li>
-		      </ul>
+		    <div class="container-fluid">
+		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		            <span class="navbar-toggler-icon"></span>
+		        </button>
+				<a class="navbar-brand" href="#">
+					<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="navbar-logo">
+				</a>
+		        <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
+			        <form class="d-flex" role="search">
+		                <input class="form-control me-2" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
+		                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+		            </form>
+			        <div class="dropdown ms-5">
+				        <i class="dropdown-toggle bi bi-person-circle" type="button" id="dropdown-login" data-bs-toggle="dropdown" aria-expanded="false"></i>
+		
+				        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+					        <li><a class="dropdown-item custom-link" href="{% url 'login_url' %}">Iniciar Sesión</a></li>
+					        <li><a class="dropdown-item custom-link" href="{% url 'register_url' %}">Registrarse</a></li>
+				        </ul>
+			        </div>
+		        </div>
 		    </div>
-		  </div>
 	    </nav>
 		
 		<div class="container-fluid d-flex justify-content-center align-items-center pt-2 b-bordered">
