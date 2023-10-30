@@ -16,4 +16,5 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout_url'),
     path('admin/logout/', custom_admin_logout, name='custom_admin_logout'),
     path('admin/', admin.site.urls),
+    path('home/perfil', views.client_profile_view, name='client_profile_url')
 ]
