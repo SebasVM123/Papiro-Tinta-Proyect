@@ -20,22 +20,22 @@
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-	<header class="b-bordered">
-		<nav class="navbar navbar-expand-md px-lg-5 b-bordered">
+	<header class="b-b-2">
+		<nav class="navbar navbar-expand-md px-lg-5 b-b-2">
 		    <div class="container-fluid">
 		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 		            <span class="navbar-toggler-icon"></span>
 		        </button>
 				<a class="navbar-brand" href="#">
-					<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="navbar-logo">
+					<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="header-logo">
 				</a>
 		        <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
 			        <form class="d-flex" role="search">
-		                <input class="form-control me-2 custom-input-b" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
-		                <button class="btn btn-outline-success custom-button" type="submit"><i class="bi bi-search"></i></button>
+		                <input class="form-control primary-input me-2 b-1 bc-gray" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
+		                <button class="btn primary-btn" type="submit"><i class="bi bi-search"></i></button>
 		            </form>
 			        <div class="dropdown ms-5">
-				        <i class="dropdown-toggle bi bi-person-circle" type="button" id="dropdown-login" data-bs-toggle="dropdown" aria-expanded="false"></i>
+				        <i class="dropdown-toggle bi bi-person-circle title-3" type="button" id="dropdown-login" data-bs-toggle="dropdown" aria-expanded="false"></i>
 		
 				        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
 					        <li><a class="dropdown-item custom-link" href="{% url 'login_url' %}">Iniciar Sesión</a></li>
@@ -46,39 +46,60 @@
 		    </div>
 	    </nav>
 		
-		<div class="container-fluid d-flex justify-content-center align-items-center pt-2 b-bordered">
+		<div class="container-fluid d-flex justify-content-center align-items-center pt-2 b-b-2">
 			<h2 class="text-center title-2">ENVÍOS GRATIS A CUALQUIER PARTE DEL MUNDO</h2>
 		</div>
 		
-		<div class="container" id="img-header">
-	        <div class="row">
+		<div class="container-fluid">
+	        <div class="row px-5">
 	            <div class="col-lg">
-	                <div class="image-container">
-	                    <img src="{% static 'assets/images/header-img.png' %}" alt="Imagen de una biblioteca con el logo de Papiro&Tinta" class="responsive-image">
-	                </div>
+		            <img class="img-fluid" src="{% static 'assets/images/header-img.png' %}" alt="Imagen de una biblioteca con el logo de Papiro&Tinta">
 	            </div>
 	        </div>
 	    </div>
 	</header>
 	
 	<main class="px-lg-5" id="main-container">
-            <div class="container d-flex flex-column align-items-center w-100 my-4 text-center" id="new-books">
+            <div class="container d-flex flex-column align-items-center w-100 my-5 text-center b-2">
 	            <div class="row w-100">
-		            <h2 class="title-2">NUEVOS LIBROS CADA SEMANA</h2>
-		            <p class="title-3">Papiro & Tinta</p>
+		            <h2 class="title-2 my-4">¡Bienvenido a Papiro & Tinta!</h2>
+		            <p class="my-4">
+			            En <span class="title-font bold-text">Papiro & Tinta</span>, celebramos la magia de las palabras
+			            impresas y el mundo de los libros. Somos más que una librería en línea; somos un rincón acogedor
+			            donde la pasión por la lectura cobra vida. Nuestra misión es llevarte en un viaje a través de
+			            historias, conocimiento y aventuras que solo un libro puede ofrecer.
+		            </p>
+		            <p class="my-4">
+			            Explora nuestra amplia selección de libros cuidadosamente curada, desde los clásicos
+			            intemporales hasta los más recientes éxitos de ventas. Aquí, encontrarás un refugio donde puedes
+			            descubrir nuevos mundos, conocer a personajes inolvidables y sumergirte en la imaginación de los
+			            autores más talentosos.
+		            </p>
+		            <p class="my-4">
+			            No importa si eres un ávido lector o estás buscando tu próximo libro favorito, en
+			            <span class="title-font bold-text">Papiro & Tinta</span> encontrarás algo que encenderá tu
+			            curiosidad y te inspirará. Navega por nuestras categorías, busca recomendaciones y encuentra el
+			            tesoro literario que estás buscando.
+		            </p>
+		            <p class="my-4">
+			            Como amantes de los libros, entendemos la importancia de cada página escrita y el poder de una
+			            buena historia. Estamos emocionados de ser parte de tu viaje literario. Bienvenido a
+			            <span class="title-font bold-text">Papiro & Tinta</span>, donde las palabras cobran vida y los
+			            libros te llevan a lugares inimaginables.
+		            </p>
 	            </div>
             </div>
-	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="explore">
-		        <div class="row w-100 text-center">
+	        <div class="container d-flex flex-column align-items-center text-center w-100 my-5 b-2">
+		        <div class="row w-100">
 			        <h2 class="title-2">EXPLORA</h2>
 		        </div>
-		        <div class="row w-100 text-left">
+		        <div class="row w-100">
 			        <p class="mb-1">Busca tu libro preferido</p>
 		        </div>
 		        <div class="row w-100">
 			        <form class="d-flex" role="search">
-				        <input class="form-control me-2 custom-input-b" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
-				        <button class="btn btn-outline-success custom-button" type="submit"><i class="bi bi-search"></i></button>
+				        <input class="form-control me-2 primary-input b-1 bc-gray" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
+				        <button class="btn primary-btn" type="submit"><i class="bi bi-search"></i></button>
 			        </form>
 		        </div>
 		        <div class="row w-100 my-3  text-center">
@@ -89,7 +110,7 @@
 		        </div>
 		        <div class="row w-100">
 			        <div class="dropdown">
-				        <button class="dropdown-toggle custom-button smooth-radius px-2 py-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				        <button class="dropdown-toggle primary-btn px-2 py-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					        Selecciona el género...
 				        </button>
 				        <ul class="dropdown-menu">
@@ -100,14 +121,14 @@
 			        </div>
 		        </div>
 		        <div class="row w-100 mt-3">
-			        <div class="d-flex justify-content-start">
+			        <div class="d-flex justify-content-center">
 				        <p class="me-2">¿Ya tienes una cuenta?</p>
 				        <a class="custom-link" href="{% url 'register_url' %}">Regístrate aquí</a>
 			        </div>
 		        </div>
             </div>
 	        
-	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="why-buy-with-us">
+	        <div class="container d-flex flex-column align-items-center w-100 my-4">
 		        <div class="row w-100 text-center">
 			        <h2 class="title-2">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
 		        </div>

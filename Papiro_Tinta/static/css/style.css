@@ -10,7 +10,7 @@
     --salmon-shadow: rgba(255, 97, 98, 0.5)
 }
 
-/* fuentes -----------------------------------------------*/
+/* fuentes ====================================================================================*/
 @font-face {
     font-family: 'Oranienbaum';
     src: url('../assets/fonts/Oranienbaum/Oranienbaum-Regular.ttf') format('truetype');
@@ -34,21 +34,15 @@
     font-family: 'Roboto', calibri;
 }
 
-
-/* global ------------------------------------------------*/
-/* imagen responsive */
-.image-container {
+/* genéricos ==================================================================================*/
+/* elementos responsive ------------------------*/
+.responsive-container {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
 }
 
-.responsive-image {
-    width: 100%;
-    height: auto;
-}
-
-/* texto */
+/* texto ---------------------------------------*/
 .title-1 {
     font-family: 'Oranienbaum', sans-serif;
     font-size: 50px;
@@ -64,121 +58,62 @@
     font-size: 25px;
 }
 
-.large-text {
-    font-size: 20px;
-}
+a {color: black;}
 
-/* estilos de texto */
-.bold-text {
-    font-weight: bold;
-}
+/* estilos de texto ----------------------------*/
+.bold-text { font-weight: bold;}
 
-.italic-text {
-    font-weight: italic;
-}
+.italic-text { font-weight: italic;}
 
-/* inputs */
-
-.custom-input-b { /* border */
-    border: 2px solid black;
-}
-
-.custom-input-bb { /* border-bottom */
-    border: none;
-    border-bottom: 2px solid black;
-    border-radius: 0;
-}
-
-.custom-input-b:focus, .custom-input-bb:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border-color: var(--salmon) !important;
-}
-
-/* buttons */
-.custom-button {
+/* botones -------------------------------------*/
+.primary-btn {
     border: 1px solid black;
-    border-radius: 0;
+    border-radius: 0px;
     background-color: var(--salmon);
     color: var(--black);
 }
 
-.custom-button:hover {
+.primary-btn:hover {
     border: 1px solid black;
     background-color: var(--salmon-light);
     color: var(--black);
 }
 
-.custom-button:active {
+.primary-btn:active {
     border: 1px solid black !important;
     background-color: var(--salmon-light) !important;
     color: var(--black) !important;
 }
 
-.custom-button:focus-visible {
+.primary-btn:focus-visible {
     border: 1px solid black;
     background-color: var(--salmon);
     color: var(--black);
     box-shadow: 0 0 0 0.25rem var(--salmon-shadow);
 }
 
-/* links */
-.custom-link {
-    color: var(--black);
+/* estilos de bordes ---------------------------*/
+.b-1 { border: 1px solid black;} .b-2 { border: 2px solid black;}
+
+.b-b-1 { border-bottom: 1px solid black;} .b-b-2 { border-bottom: 2px solid black;}
+
+.t-b-1 { border-top: 1px solid black;} .t-b-2 { border-top: 2px solid black;}
+
+.smoothed-border { border-radius: 5px;}
+
+.bc-gray { border-color: gray;}
+
+/* actions ---------------------------------------*/
+.primary-input:focus {
+    outline: 2px solid black;
+    box-shadow: none;
 }
 
-.dropdown-link:active {
-    background-color: var(--salmon-light);
-}
 
-/* borders */
-.bordered {
-    border: 2px solid black;
-}
 
-.b-bordered {
-    border-bottom: 2px solid black;
-}
 
-.t-bordered {
-    border-top: 2px solid black;
-}
-
-.smooth-radius {
-    border-radius: 2px;
-}
-
-/* header ------------------------------------------------*/
-/* navbar */
-#navbar-logo {
+/* personalizadas =============================================================================*/
+#header-logo {
     max-width: 100px;
     height: auto;
-}
-
-#dropdown-login {
-    font-size: 30px;
-}
-
-/* main --------------------------------------------------*/
-#main-container .container {
-    border: 2px solid black;
-    padding: 12px;
-}
-
-#main-container #why-buy-with-us i {
-    font-size: 50px;
-}
-
-/* login ------------------------------------------*/
-#login-container .row .col {
-    min-width: 150px;
-}
-
-#login-box {
-    max-width: 400px;
-}
-
-/* registrarse ------------------------------------*/
-#signup-container .row .col {
-    min-width: 150px;
 }
