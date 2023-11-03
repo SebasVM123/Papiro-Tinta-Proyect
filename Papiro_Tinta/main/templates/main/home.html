@@ -20,170 +20,47 @@
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-	<header class="b-bordered">
-		<nav class="navbar navbar-expand-md px-lg-5 b-bordered">
-		    <div class="container-fluid">
-		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		            <span class="navbar-toggler-icon"></span>
-		        </button>
-				<a class="navbar-brand" href="#">
-					<img class="img-fluid" src="{% static 'assets/logo/logo-2.png' %}" alt="logo de Papiro & Tinta" id="navbar-logo">
-				</a>
-		        <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
-			        <form class="d-flex" role="search">
-		                <input class="form-control me-2" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
-		                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-		            </form>
-			        <div class="dropdown ms-5">
-				        <i class="dropdown-toggle bi bi-person-circle" type="button" id="dropdown-login" data-bs-toggle="dropdown" aria-expanded="false"></i>
-	
-					    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-						    <li><a class="dropdown-item custom-link" href="{% url 'client_profile_url' %}">Perfil</a></li>
-						    <li><a class="dropdown-item custom-link" href="{% url 'index' %}">Cerrar Sesión</a></li>
-					    </ul>
-			        </div>
-		        </div>
-		    </div>
-	    </nav>
-		
-		<div class="container-fluid d-flex justify-content-center align-items-center pt-2 b-bordered">
-			<h2 class="text-center title-2">ENVÍOS GRATIS A CUALQUIER PARTE DEL MUNDO</h2>
-		</div>
-		
-		<div class="container" id="img-header">
-	        <div class="row">
-	            <div class="col-lg">
-	                <div class="image-container">
-	                    <img src="{% static 'assets/images/header-img.png' %}" alt="Imagen de una biblioteca con el logo de Papiro&Tinta" class="responsive-image">
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</header>
-	
-	<main class="px-lg-5" id="main-container">
-            <div class="container d-flex flex-column align-items-center w-100 my-4 text-center" id="new-books">
-	            <div class="row w-100">
-		            <h2 class="title-2">NUEVOS LIBROS CADA SEMANA</h2>
-		            <p class="title-3">Papiro & Tinta</p>
-	            </div>
-            </div>
-	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="explore">
-		        <div class="row w-100 text-center">
+	<div class="container d-flex flex-column align-items-center text-center w-100 my-5 b-2">
+		        <div class="row w-100 mt-4">
 			        <h2 class="title-2">EXPLORA</h2>
 		        </div>
-		        <div class="row w-100 text-left">
-			        <p class="mb-1">Busca tu libro preferido</p>
+		        <div class="row w-100 mb-1">
+			        <span class="mb-1">Busca tu libro preferido</span>
 		        </div>
 		        <div class="row w-100">
 			        <form class="d-flex" role="search">
-				        <input class="form-control me-2" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
-				        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+				        <input class="form-control me-2 primary-input b-1 bc-gray" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
+				        <button class="btn primary-btn" type="submit"><i class="bi bi-search"></i></button>
 			        </form>
 		        </div>
-		        <div class="row w-100 my-3  text-center">
-			        <h2 class="title-2">Ó</h2>
+		        <div class="row w-100 my-3">
+			        <span class="title-2">Ó</span>
 		        </div>
-		        <div class="row w-100 text-left">
-			        <p>Busca tu género favorito</p>
+		        <div class="row w-100 mb-1">
+			        <span>Busca tu género favorito</span>
 		        </div>
 		        <div class="row w-100">
 			        <div class="dropdown">
-				        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				        <button class="dropdown-toggle primary-btn px-2 py-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					        selecciona el género...
 				        </button>
 				        <ul class="dropdown-menu">
-					        <li><a class="dropdown-item" href="#">Genero 1</a></li>
-					        <li><a class="dropdown-item" href="#">Genero 2</a></li>
-					        <li><a class="dropdown-item" href="#">Genero 3</a></li>
+					        <li><a class="dropdown-item custom-link dropdown-link" href="#">Genero 1</a></li>
+					        <li><a class="dropdown-item custom-link dropdown-link" href="#">Genero 2</a></li>
+					        <li><a class="dropdown-item custom-link dropdown-link" href="#">Genero 3</a></li>
 				        </ul>
 			        </div>
 		        </div>
-		        <div class="row w-100 mt-3">
-			        <div class="d-flex justify-content-start">
-				        <p class="me-2">¿Ya tienes una cuenta?</p>
-				        <a class="custom-link" href="{% url 'register_url' %}">Regístrate aquí</a>
+		        <div class="row w-100 mt-4 my-4">
+			        <div class="d-flex justify-content-center">
+				        <a class="me-2" href="{% url 'login_url' %}">¿Ya tienes una cuenta?</a>
+				        <a href="{% url 'register_url' %}">Regístrate aquí</a>
 			        </div>
 		        </div>
             </div>
-	        
-	        <div class="container d-flex flex-column align-items-center w-100 my-4" id="why-buy-with-us">
-		        <div class="row w-100 text-center">
-			        <h2 class="title-2">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
-		        </div>
-		        <div class="row w-100 text-center">
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-truck"></i>
-					        <p class="bold-text">SERVICIO DE ENTREGA ÁGIL Y GRATIS</p>
-				        </div>
-			        </div>
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-credit-card"></i>
-					        <p class="bold-text">COMPRAS CÓMODAS Y 100% SEGURAS</p>
-				        </div>
-			        </div>
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-book-half"></i>
-					        <p class="bold-text">DEVOLUCIONES FÁCILES Y RÁPIDAS</p>
-				        </div>
-			        </div>
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-bag-check"></i>
-					        <p class="bold-text">RECIBE EN CASA O RECOGE EN LA TIENDA</p>
-				        </div>
-			        </div>
-		        </div>
-	        </div>
-		
-			<div class="container d-flex flex-column align-items-center w-100 my-4" id="know-us">
-				<div class="row w-100">
-					<h2 class="title-2 text-center">CONÓCENOS</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum. </p>
-				</div>
-			</div>
-	</main>
-	
-	<footer class="container-fluid d-flex flex-column align-items-center mt-5 t-bordered b-bordered">
-			<div class="row w-100" id="top-footer">
-				<h2 class="title-2 text-center">Papiro & Tinta</h2>
-				<p class="text-center">La magia en cada página</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-			<div class="row w-100 id=bottom-footer">
-				<p class="text-center">© Papiro & Tinta 2023 - Todos los derechos reservados</p>
-			</div>
-	</footer>
 	
 	<!-- JS Bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-{% comment %} <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<a href="{% url 'logout_url' %}">Cerrar sesión</a>
-</head>
-<body>
-	home.html
-</body>
-</html> {% endcomment %}
 

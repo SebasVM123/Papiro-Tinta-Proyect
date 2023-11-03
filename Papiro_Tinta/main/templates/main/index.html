@@ -38,8 +38,8 @@
 				        <i class="dropdown-toggle bi bi-person-circle title-3" type="button" id="dropdown-login" data-bs-toggle="dropdown" aria-expanded="false"></i>
 		
 				        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-					        <li><a class="dropdown-item custom-link" href="{% url 'login_url' %}">Iniciar Sesión</a></li>
-					        <li><a class="dropdown-item custom-link" href="{% url 'register_url' %}">Registrarse</a></li>
+					        <li><a class="dropdown-item dropdown-link" href="{% url 'login_url' %}">Iniciar Sesión</a></li>
+					        <li><a class="dropdown-item dropdown-link" href="{% url 'register_url' %}">Registrarse</a></li>
 				        </ul>
 			        </div>
 		        </div>
@@ -60,116 +60,109 @@
 	</header>
 	
 	<main class="px-lg-5" id="main-container">
-            <div class="container d-flex flex-column align-items-center w-100 my-5 text-center b-2">
-	            <div class="row w-100">
-		            <h2 class="title-2 my-4">¡Bienvenido a Papiro & Tinta!</h2>
-		            <p class="my-4">
-			            En <span class="title-font bold-text">Papiro & Tinta</span>, celebramos la magia de las palabras
-			            impresas y el mundo de los libros. Somos más que una librería en línea; somos un rincón acogedor
-			            donde la pasión por la lectura cobra vida. Nuestra misión es llevarte en un viaje a través de
-			            historias, conocimiento y aventuras que solo un libro puede ofrecer.
-		            </p>
-		            <p class="my-4">
-			            Explora nuestra amplia selección de libros cuidadosamente curada, desde los clásicos
-			            intemporales hasta los más recientes éxitos de ventas. Aquí, encontrarás un refugio donde puedes
-			            descubrir nuevos mundos, conocer a personajes inolvidables y sumergirte en la imaginación de los
-			            autores más talentosos.
-		            </p>
-		            <p class="my-4">
-			            No importa si eres un ávido lector o estás buscando tu próximo libro favorito, en
-			            <span class="title-font bold-text">Papiro & Tinta</span> encontrarás algo que encenderá tu
-			            curiosidad y te inspirará. Navega por nuestras categorías, busca recomendaciones y encuentra el
-			            tesoro literario que estás buscando.
-		            </p>
-		            <p class="my-4">
-			            Como amantes de los libros, entendemos la importancia de cada página escrita y el poder de una
-			            buena historia. Estamos emocionados de ser parte de tu viaje literario. Bienvenido a
-			            <span class="title-font bold-text">Papiro & Tinta</span>, donde las palabras cobran vida y los
-			            libros te llevan a lugares inimaginables.
-		            </p>
-	            </div>
+        <div class="container d-flex flex-column align-items-center w-100 my-5 text-center b-2">
+            <div class="row w-100">
+	            <h2 class="title-2 my-4">¡Bienvenido a Papiro & Tinta!</h2>
+	            <p class="my-4">
+		            En <span class="title-font bold-text">Papiro & Tinta</span>, celebramos la magia de las palabras
+		            impresas y el mundo de los libros. Somos más que una librería en línea; somos un rincón acogedor
+		            donde la pasión por la lectura cobra vida. Nuestra misión es llevarte en un viaje a través de
+		            historias, conocimiento y aventuras que solo un libro puede ofrecer.
+	            </p>
+	            <p class="my-4">
+		            Explora nuestra amplia selección de libros cuidadosamente curada, desde los clásicos
+		            intemporales hasta los más recientes éxitos de ventas. Aquí, encontrarás un refugio donde puedes
+		            descubrir nuevos mundos, conocer a personajes inolvidables y sumergirte en la imaginación de los
+		            autores más talentosos.
+	            </p>
+	            <p class="my-4">
+		            No importa si eres un ávido lector o estás buscando tu próximo libro favorito, en
+		            <span class="title-font bold-text">Papiro & Tinta</span> encontrarás algo que encenderá tu
+		            curiosidad y te inspirará. Navega por nuestras categorías, busca recomendaciones y encuentra el
+		            tesoro literario que estás buscando.
+	            </p>
+	            <p class="my-4">
+		            Como amantes de los libros, entendemos la importancia de cada página escrita y el poder de una
+		            buena historia. Estamos emocionados de ser parte de tu viaje literario. Bienvenido a
+		            <span class="title-font bold-text">Papiro & Tinta</span>, donde las palabras cobran vida y los
+		            libros te llevan a lugares inimaginables.
+	            </p>
             </div>
-	        <div class="container d-flex flex-column align-items-center text-center w-100 my-5 b-2">
-		        <div class="row w-100">
-			        <h2 class="title-2">EXPLORA</h2>
-		        </div>
-		        <div class="row w-100">
-			        <p class="mb-1">Busca tu libro preferido</p>
-		        </div>
-		        <div class="row w-100">
-			        <form class="d-flex" role="search">
-				        <input class="form-control me-2 primary-input b-1 bc-gray" type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
-				        <button class="btn primary-btn" type="submit"><i class="bi bi-search"></i></button>
-			        </form>
-		        </div>
-		        <div class="row w-100 my-3  text-center">
-			        <h2 class="title-2">Ó</h2>
-		        </div>
-		        <div class="row w-100 text-left">
-			        <p>Busca tu género favorito</p>
-		        </div>
-		        <div class="row w-100">
-			        <div class="dropdown">
-				        <button class="dropdown-toggle primary-btn px-2 py-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-					        Selecciona el género...
-				        </button>
-				        <ul class="dropdown-menu">
-					        <li><a class="dropdown-item custom-link dropdown-link" href="#">Genero 1</a></li>
-					        <li><a class="dropdown-item custom-link dropdown-link" href="#">Genero 2</a></li>
-					        <li><a class="dropdown-item custom-link dropdown-link" href="#">Genero 3</a></li>
-				        </ul>
+        </div>
+	
+		<div class="container mt-6">
+		    <div class="row">
+			    <div class="col-md-2 d-none d-md-block"></div>
+				<div class="col-md-4">
+					<div class="container-fluid position-relative no-spacing">
+						<div class="row">
+							<img class="img-fluid" src="{% static 'assets/images/login-img.jpg' %}" alt="Imagen de libros abiertos con estróbilos encima">
+						</div>
+						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
+							<div class="floating-box p-4">
+								<a class="no-decoration bold-text" href="#">Iniciar Sesión</a>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 mt-md-0 mt-5">
+	                <div class="container-fluid position-relative no-spacing">
+						<div class="row">
+							<img class="img-fluid" src="{% static 'assets/images/register-img.jpg' %}" alt="Imagen de libros abiertos con estróbilos encima">
+						</div>
+						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
+							<div class="floating-box p-4">
+								<a class="no-decoration bold-text" href="#">Registrarse</a>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="col-md-2 d-none d-md-block"></div>
+		    </div>
+		</div>
+		
+        <div class="container d-flex flex-column align-items-center w-100 mt-7">
+	        <div class="row w-100 text-center">
+		        <h2 class="title-2">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
+	        </div>
+	        <div class="row w-100 text-center">
+		        <div class="col-12 col-md-3">
+			        <div class="d-flex flex-column align-items-center">
+				        <i class="bi bi-truck"></i>
+				        <p class="bold-text">SERVICIO DE ENTREGA ÁGIL Y GRATIS</p>
 			        </div>
 		        </div>
-		        <div class="row w-100 mt-3">
-			        <div class="d-flex justify-content-center">
-				        <p class="me-2">¿Ya tienes una cuenta?</p>
-				        <a class="custom-link" href="{% url 'register_url' %}">Regístrate aquí</a>
+		        <div class="col-12 col-md-3">
+			        <div class="d-flex flex-column align-items-center">
+				        <i class="bi bi-credit-card"></i>
+				        <p class="bold-text">COMPRAS CÓMODAS Y 100% SEGURAS</p>
 			        </div>
 		        </div>
-            </div>
-	        
-	        <div class="container d-flex flex-column align-items-center w-100 my-4">
-		        <div class="row w-100 text-center">
-			        <h2 class="title-2">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
+		        <div class="col-12 col-md-3">
+			        <div class="d-flex flex-column align-items-center">
+				        <i class="bi bi-book-half"></i>
+				        <p class="bold-text">DEVOLUCIONES FÁCILES Y RÁPIDAS</p>
+			        </div>
 		        </div>
-		        <div class="row w-100 text-center">
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-truck"></i>
-					        <p class="bold-text">SERVICIO DE ENTREGA ÁGIL Y GRATIS</p>
-				        </div>
-			        </div>
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-credit-card"></i>
-					        <p class="bold-text">COMPRAS CÓMODAS Y 100% SEGURAS</p>
-				        </div>
-			        </div>
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-book-half"></i>
-					        <p class="bold-text">DEVOLUCIONES FÁCILES Y RÁPIDAS</p>
-				        </div>
-			        </div>
-			        <div class="col-12 col-md-3">
-				        <div class="d-flex flex-column align-items-center">
-					        <i class="bi bi-bag-check"></i>
-					        <p class="bold-text">RECIBE EN CASA O RECOGE EN LA TIENDA</p>
-				        </div>
+		        <div class="col-12 col-md-3">
+			        <div class="d-flex flex-column align-items-center">
+				        <i class="bi bi-bag-check"></i>
+				        <p class="bold-text">RECIBE EN CASA O RECOGE EN LA TIENDA</p>
 			        </div>
 		        </div>
 	        </div>
-		
-			<div class="container d-flex flex-column align-items-center w-100 my-4" id="know-us">
-				<div class="row w-100">
-					<h2 class="title-2 text-center">CONÓCENOS</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum. </p>
-				</div>
+        </div>
+	
+		<div class="container d-flex flex-column align-items-center w-100 my-4" id="know-us">
+			<div class="row w-100">
+				<h2 class="title-2 text-center">CONÓCENOS</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+				aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+				culpa qui officia deserunt mollit anim id est laborum. </p>
 			</div>
+		</div>
 	</main>
 	
 	<footer class="container-fluid d-flex flex-column align-items-center mt-5 t-bordered b-bordered">
