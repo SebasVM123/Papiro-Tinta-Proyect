@@ -20,8 +20,8 @@
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-	<header class="b-b-2">
-		<nav class="navbar navbar-expand-md px-lg-5 b-b-2">
+	<header class="bb-2">
+		<nav class="navbar navbar-expand-md px-lg-5 bb-2">
 		    <div class="container-fluid">
 		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 		            <span class="navbar-toggler-icon"></span>
@@ -96,8 +96,8 @@
 							<img class="img-fluid" src="{% static 'assets/images/login-img.jpg' %}" alt="Imagen de libros abiertos con estróbilos encima">
 						</div>
 						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
-							<div class="floating-box p-4">
-								<a class="no-decoration bold-text" href="#">Iniciar Sesión</a>
+							<div class="p-4 b-2 bg-sgreen">
+								<a class="no-decoration bold-text" href="{% url 'login_url' %}">Iniciar Sesión</a>
 							</div>
 						</div>
 					</div>
@@ -108,8 +108,8 @@
 							<img class="img-fluid" src="{% static 'assets/images/register-img.jpg' %}" alt="Imagen de libros abiertos con estróbilos encima">
 						</div>
 						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
-							<div class="floating-box p-4">
-								<a class="no-decoration bold-text" href="#">Registrarse</a>
+							<div class="p-4 b-2 bg-sgreen">
+								<a class="no-decoration bold-text" href="{% url 'register_url' %}">Registrarse</a>
 							</div>
 						</div>
 					</div>
@@ -183,21 +183,14 @@
 		</div>
 	</main>
 	
-	<footer class="container-fluid d-flex flex-column align-items-center mt-5 t-bordered b-bordered">
-			<div class="row w-100" id="top-footer">
-				<h2 class="title-2 text-center">Papiro & Tinta</h2>
-				<p class="text-center">La magia en cada página</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-			<div class="row w-100 id=bottom-footer">
-				<p class="text-center">© Papiro & Tinta 2023 - Todos los derechos reservados</p>
-			</div>
+	<footer class="container-fluid mt-6 pt-3 tb-2 text-center bg-blue">
+		<div class="row w-100">
+			<h2 class="title-2">Papiro & Tinta</h2>
+			<p class="text-center">La magia en cada página</p>
+		</div>
+		<div class="row w-100">
+			<p>© Papiro & Tinta 2023 - Todos los derechos reservados</p>
+		</div>
 	</footer>
 	
 	<!-- JS Bootstrap -->

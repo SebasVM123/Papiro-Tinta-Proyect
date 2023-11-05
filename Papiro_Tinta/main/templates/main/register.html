@@ -26,9 +26,7 @@
 		<div class="container d-flex align-items-center" id="signup-container">
 			<div class="row justify-content-center">
 				<div class="col col-2 d-none d-sm-none d-md-block align-self-start">
-					<div class="image-container">
-		                <img src="{% static 'assets/images/flower.png' %}" alt="Imagen de una flor" class="responsive-image">
-	                </div>
+					<img src="{% static 'assets/images/flower.png' %}" alt="Imagen de una flor" class="img-fluid">
 				</div>
 				<div class="col-md-auto align-self-center" id="signup-box">
 					<h1 class="title-1">Registrarse</h1>
@@ -82,68 +80,68 @@
 				</div>
 
 				<script>
-			document.addEventListener("DOMContentLoaded", function() {
-            const formulario = document.getElementById("login-form");
-            const nombreInput = document.getElementById("floatingName");
-			const apellidoInput = document.getElementById("floatingLastName")
-			const direccionInput = document.getElementById("floatingAddress")
-			const ciudadInput = document.getElementById("floatingCity")
-			const estadoInput = document.getElementById("floatingProvince")
-			const paisInput = document.getElementById("floatingCountry")
+					document.addEventListener("DOMContentLoaded", function() {
+		            const formulario = document.getElementById("login-form");
+		            const nombreInput = document.getElementById("floatingName");
+					const apellidoInput = document.getElementById("floatingLastName")
+					const direccionInput = document.getElementById("floatingAddress")
+					const ciudadInput = document.getElementById("floatingCity")
+					const estadoInput = document.getElementById("floatingProvince")
+					const paisInput = document.getElementById("floatingCountry")
             
 
-            formulario.addEventListener("submit", function(event) {
-                if (nombreInput.value.length < 2) {
-                    alert("El nombre debe tener al menos 2 caracteres.");
-                    event.preventDefault(); 
-                } else if(nombreInput.value.length >= 100){
-					alert("El nombre debe ser mas corto");
-                    event.preventDefault();
-
-				}
-
-                if (apellidoInput.value.length < 2) {
-                    alert("El apellido debe tener al menos 2 caracteres.");
-                    event.preventDefault();
-                } else if(apellidoInput.value.length >= 100){
-					alert("El apellido debe ser mas corto");
-                    event.preventDefault();
-
-				}
-
-				if (direccionInput.value.length < 6){
-					alert("La direccion debe tener al menos 6 caracteres.");
-					event.preventDefault();
-				} else if(direccionInput.value.length >= 50){
-					alert("La direccion tiene que ser mas corta");
-                    event.preventDefault();
-				}
-
-				if(ciudadInput.value.length < 4){
-					alert("El nombre de la ciduad debe tener al menos 6 caracteres.");
-					event.preventDefault();
-				} else if(ciudadInput.value.length >= 50){
-					alert("El nombre de la ciudad debe ser mas corto");
-                    event.preventDefault();
-				}
-
-				if(estadoInput.value.length < 4){
-					alert("El nombre del estado debe tener al menos 6 caracteres.");
-					event.preventDefault();
-				} else if(estadoInput.value.length >= 50){
-					alert("El nombre del estado debe ser mas corto");
-                    event.preventDefault();
-				}
-				
-				if(paisInput.value.length < 5){
-					alert("El nombre del pais debe tener al menos 6 caracteres.");
-					event.preventDefault();
-				}else if(paisInput.value.length >= 50){
-					alert("El nombre del pais debe ser mas corto");
-                    event.preventDefault();
-				}
-            });
-        });
+		            formulario.addEventListener("submit", function(event) {
+		                if (nombreInput.value.length < 2) {
+		                    alert("El nombre debe tener al menos 2 caracteres.");
+		                    event.preventDefault();
+		                } else if(nombreInput.value.length >= 100){
+							alert("El nombre debe ser mas corto");
+		                    event.preventDefault();
+		
+						}
+		
+		                if (apellidoInput.value.length < 2) {
+		                    alert("El apellido debe tener al menos 2 caracteres.");
+		                    event.preventDefault();
+		                } else if(apellidoInput.value.length >= 100){
+							alert("El apellido debe ser mas corto");
+		                    event.preventDefault();
+		
+						}
+		
+						if (direccionInput.value.length < 6){
+							alert("La direccion debe tener al menos 6 caracteres.");
+							event.preventDefault();
+						} else if(direccionInput.value.length >= 50){
+							alert("La direccion tiene que ser mas corta");
+		                    event.preventDefault();
+						}
+		
+						if(ciudadInput.value.length < 4){
+							alert("El nombre de la ciduad debe tener al menos 6 caracteres.");
+							event.preventDefault();
+						} else if(ciudadInput.value.length >= 50){
+							alert("El nombre de la ciudad debe ser mas corto");
+		                    event.preventDefault();
+						}
+		
+						if(estadoInput.value.length < 4){
+							alert("El nombre del estado debe tener al menos 6 caracteres.");
+							event.preventDefault();
+						} else if(estadoInput.value.length >= 50){
+							alert("El nombre del estado debe ser mas corto");
+		                    event.preventDefault();
+						}
+						
+						if(paisInput.value.length < 5){
+							alert("El nombre del pais debe tener al menos 6 caracteres.");
+							event.preventDefault();
+						}else if(paisInput.value.length >= 50){
+							alert("El nombre del pais debe ser mas corto");
+		                    event.preventDefault();
+						}
+		            });
+                });
 
 	const birthdateInput = document.getElementById("floatingBirthdate"); 
 
@@ -172,9 +170,7 @@
 				</script>
 
 				<div class="col col-2 d-none d-sm-none d-md-block align-self-end">
-					<div class="image-container">
-		                <img src="{% static 'assets/images/flower-r.png' %}" alt="Imagen de una flor" class="responsive-image">
-	                </div>
+					<img src="{% static 'assets/images/flower-r.png' %}" alt="Imagen de una flor" class="img-fluid">
 				</div>
 			</div>
 		</div>
