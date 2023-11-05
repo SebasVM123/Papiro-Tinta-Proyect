@@ -1,5 +1,6 @@
 :root {
     --green: rgb(112, 128, 109);
+    --light-green: rgb(139, 154, 137);
     --blue: rgb(60, 107, 108);
     --orange: rgb(249, 77, 1);
     --gray: rgb(227, 226, 222);
@@ -41,15 +42,10 @@
 
 .no-padding { padding: 0;}
 
-.image-container {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
 /* colores -------------------------------------*/
 .bg-sgreen { background-color: var(--shadow-green);}
 .bg-blue { background-color: var(--blue);}
+.c-orange { color: var(--orange);}
 
 /* margenes ------------------------------------*/
 .my-6 { margin-top: 6rem; margin-bottom: 6rem;}
@@ -98,42 +94,60 @@ a {color: #000;}
 
 .primary-btn:hover {
     border: 1px solid black;
-    background-color: var(--salmon-light);
+    background-color: var(--light-green);
     color: black;
 }
 
 .primary-btn:active {
     border: 1px solid black !important;
-    background-color: var(--salmon-light) !important;
+    background-color: var(--light-green) !important;
     color: black !important;
 }
 
 .primary-btn:focus-visible {
     border: 1px solid black;
-    background-color: var(--salmon);
+    background-color: var(--green);
     color: black;
-    box-shadow: 0 0 0 0.25rem var(--salmon-shadow);
+    box-shadow: 0 0 0 0.25rem var(--shadow-green);
 }
 
 /* bordes --------------------------------------*/
-.b-1 { border: 1px solid black;} .b-2 { border: 2px solid black;}
+.b-1 { border: 1px solid var(--green);} .b-2 { border: 2px solid var(--green);}
 
-.bb-1 { border-bottom: 1px solid black;} .bb-2 { border-bottom: 2px solid black;}
+.bb-1 { border-bottom: 1px solid var(--green);} .bb-2 { border-bottom: 2px solid var(--green);}
 
-.tb-1 { border-top: 1px solid black;} .tb-2 { border-top: 2px solid black;}
+.tb-1 { border-top: 1px solid var(--green);} .tb-2 { border-top: 2px solid var(--green);}
 
 .smoothed-border { border-radius: 5px;}
 
 .bc-gray { border-color: var(--gray);}
 
-/* actions utilities -----------------------------*/
+/* inputs ----------------------------------------*/
 .primary-input:focus {
-    outline: 2px solid black;
+    outline: 2px solid var(--green);
     border-color: var(--gray);
     box-shadow: none;
 }
 
-.dropdown-link:active { background-color: var(--salmon-light);}
+.primary-input:focus-visible {
+    outline: 2px solid var(--green);
+    border-color: var(--gray);
+    box-shadow: none;
+}
+
+.secondary-input {
+    border: none;
+    border-bottom: 2px solid var(--green);
+    border-radius: 0;
+}
+
+.secondary-input:focus {
+    border-bottom: 2px solid var(--orange);
+    box-shadow: none;
+}
+
+/* actions utilities -----------------------------*/
+.dropdown-link:active { background-color: var(--light-green);}
 
 /* personalizadas =============================================================================*/
 #header-logo {

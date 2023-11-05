@@ -32,17 +32,17 @@
 			        <form class="py-4" id="login-form" method="post">
 				        {% csrf_token %}
 				        <div class="form-floating mb-3">
-					        <input type="email" class="form-control custom-input-b" id="floatingEmail" name="email" placeholder="nombre@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">
+					        <input type="email" class="form-control primary-input" id="floatingEmail" name="email" placeholder="nombre@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">
 					        <label for="floatingEmail">Correo electrónico</label>
 				        </div>
 				        <div class="form-floating">
-					        <input type="password" class="form-control custom-input-b" id="floatingPassword" name="password" placeholder="contraseña" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número">
+					        <input type="password" class="form-control primary-input" id="floatingPassword" name="password" placeholder="contraseña" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{4,}" title="La contraseña debe tener mínimo 8 caracteres y tener al menos una letra y un número">
 					        <label for="floatingPassword">Contraseña</label>
 				        </div>
-				        <button type="submit" class="btn btn-primary mt-3 custom-button">Iniciar Sesión</button>
+				        <button type="submit" class="btn primary-btn mt-3 custom-button">Iniciar Sesión</button>
 			        </form>
 			        <p class="mt-2">¿No tienes una cuenta? <a href="{% url 'register_url' %}" class="mt-2 custom-link">Regístrate gratis</a></p>
-					<a href="{% url 'index' %}" class="custom-link"><i class="bi bi-house title-3"></i></a><i class="bi bi-arrow-return-left title-3"></i>
+					<a href="{% url 'index' %}"><i class="bi bi-house title-3"></i></a><i class="bi bi-arrow-return-left title-3"></i>
 				</div>
 				<div class="col col-2 d-none d-sm-none d-md-block align-self-end">
 					<img src="{% static 'assets/images/flower-r.png' %}" alt="Imagen de una flor girada 180 grados a la derecha" class="img-fluid">
