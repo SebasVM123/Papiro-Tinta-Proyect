@@ -2,10 +2,12 @@
     --green: rgb(112, 128, 109);
     --light-green: rgb(139, 154, 137);
     --blue: rgb(60, 107, 108);
-    --orange: rgb(249, 77, 1);
+    --orange: rgb(250, 94, 25);
+    --light-orange: rgb(251, 119, 61);
     --gray: rgb(227, 226, 222);
 
     --shadow-green: rgba(112, 128, 109, 0.6);
+    --shadow-orange: rgba(250, 94, 25, 0.6);
 }
 
 /* fuentes ====================================================================================*/
@@ -42,10 +44,13 @@
 
 .no-padding { padding: 0;}
 
+.auto-w { width: 300px;}
+
 /* colores -------------------------------------*/
 .bg-sgreen { background-color: var(--shadow-green);}
 .bg-blue { background-color: var(--blue);}
 .c-orange { color: var(--orange);}
+.c-green { color: var(--green);}
 
 /* margenes ------------------------------------*/
 .my-6 { margin-top: 6rem; margin-bottom: 6rem;}
@@ -92,13 +97,7 @@ a {color: #000;}
     color: black;
 }
 
-.primary-btn:hover {
-    border: 1px solid black;
-    background-color: var(--light-green);
-    color: black;
-}
-
-.primary-btn:active {
+.primary-btn:hover, .primary-btn:active {
     border: 1px solid black !important;
     background-color: var(--light-green) !important;
     color: black !important;
@@ -109,6 +108,26 @@ a {color: #000;}
     background-color: var(--green);
     color: black;
     box-shadow: 0 0 0 0.25rem var(--shadow-green);
+}
+
+.secondary-btn {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: var(--orange);
+    color: black;
+}
+
+.secondary-btn:hover, .secondary-btn:active {
+    border: 1px solid black;
+    background-color: var(--light-orange);
+    color: black;
+}
+
+.secondary-btn:focus-visible {
+    border: 1px solid black;
+    background-color: var(--orange);
+    color: black;
+    box-shadow: 0 0 0 0.25rem var(--shadow-orange);
 }
 
 /* bordes --------------------------------------*/
@@ -132,7 +151,7 @@ a {color: #000;}
 .primary-input:focus-visible {
     outline: 2px solid var(--green);
     border-color: var(--gray);
-    box-shadow: none;
+    box-shadow: 0 0 0 0.25rem var(--shadow-green);
 }
 
 .secondary-input {
@@ -147,6 +166,8 @@ a {color: #000;}
 }
 
 /* actions utilities -----------------------------*/
+.green-shadow:focus-visible { box-shadow: 0 0 0 0.25rem var(--shadow-green);}
+
 .dropdown-link:active { background-color: var(--light-green);}
 
 /* personalizadas =============================================================================*/
