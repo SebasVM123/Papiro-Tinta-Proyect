@@ -2,12 +2,18 @@
     --green: rgb(112, 128, 109);
     --light-green: rgb(139, 154, 137);
     --blue: rgb(60, 107, 108);
-    --orange: rgb(250, 94, 25);
-    --light-orange: rgb(251, 119, 61);
+    --orange: rgb(249, 77, 3);
+    --terracotta: rgb(171, 71, 77);
+    --light-terracotta: rgb(188, 95, 99);
     --gray: rgb(227, 226, 222);
 
     --shadow-green: rgba(112, 128, 109, 0.6);
-    --shadow-orange: rgba(250, 94, 25, 0.6);
+    --shadow-terracotta: rgba(171, 71, 77, 0.6);
+    --shadow-gray: rgba(227, 226, 222, 0.7);
+
+    /*
+    red-brown: (186, 49, 46);
+    */
 }
 
 /* fuentes ====================================================================================*/
@@ -23,7 +29,7 @@
 
 * {
     font-family: 'Roboto', calibri;
-    font-size: 18px;
+    font-size: 1.05rem;
 }
 
 .title-font {
@@ -37,26 +43,20 @@
 /* genéricos ==================================================================================*/
 /* display utilities----------------------------*/
 .bg-red { background-color: red;} .bg-black { background-color: black; }
-
 .no-decoration {text-decoration: none; }
-
 .no-spacing { padding: 0; margin: 0}
-
 .no-padding { padding: 0;}
-
-.auto-w { width: 300px;}
 
 /* colores -------------------------------------*/
 .bg-sgreen { background-color: var(--shadow-green);}
 .bg-blue { background-color: var(--blue);}
 .c-orange { color: var(--orange);}
 .c-green { color: var(--green);}
+.bg-sgray { background-color: var(--shadow-gray);}
 
 /* margenes ------------------------------------*/
 .my-6 { margin-top: 6rem; margin-bottom: 6rem;}
-
 .mt-6 { margin-top: 6rem;}
-
 .mt-7 { margin-top: 8rem;}
 
 /* elementos responsive ------------------------*/
@@ -67,24 +67,22 @@
 }
 
 /* texto ---------------------------------------*/
-.title-1 {
-    font-family: 'Oranienbaum', sans-serif;
-    font-size: 50px;
+.xl-text {
+    font-size: 3rem;
 }
 
-.title-2 {
-    font-family: 'Oranienbaum', sans-serif;
-    font-size: 36px;
+.l-text {
+    font-size: 2rem;
 }
 
-.title-3 {
-    font-family: 'Oranienbaum', sans-serif;
-    font-size: 25px;
+.m-text {
+    font-size: 1.5rem;
 }
 
-a {color: #000;}
+a { color: #000;}
 
-/* estilos de texto ----------------------------*/
+.large-icon { font-size: }
+
 .bold-text { font-weight: bold;}
 
 .italic-text { font-weight: italic;}
@@ -113,21 +111,21 @@ a {color: #000;}
 .secondary-btn {
     border: 1px solid black;
     border-radius: 0;
-    background-color: var(--orange);
+    background-color: var(--terracotta);
     color: black;
 }
 
 .secondary-btn:hover, .secondary-btn:active {
     border: 1px solid black;
-    background-color: var(--light-orange);
+    background-color: var(--light-terracotta);
     color: black;
 }
 
 .secondary-btn:focus-visible {
     border: 1px solid black;
-    background-color: var(--orange);
+    background-color: var(--terracotta);
     color: black;
-    box-shadow: 0 0 0 0.25rem var(--shadow-orange);
+    box-shadow: 0 0 0 0.25rem var(--shadow-terracotta);
 }
 
 /* bordes --------------------------------------*/

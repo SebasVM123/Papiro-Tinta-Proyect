@@ -16,6 +16,8 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<!-- Bootstrap icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<!-- FontAwesome icons -->
+	<script src="https://kit.fontawesome.com/f53f4ad4af.js" crossorigin="anonymous"></script>
 	<!-- CSS -->
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
@@ -35,7 +37,7 @@
 		                <button class="btn primary-btn" type="submit"><i class="bi bi-search"></i></button>
 		            </form>
 			        <div class="dropdown ms-md-5 ms-0 text-end">
-				        <i class="dropdown-toggle bi bi-person-circle title-3" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+				        <i class="dropdown-toggle bi bi-person-circle m-text" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
 		
 				        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
 					        <li><a class="dropdown-item dropdown-link" href="{% url 'login_url' %}">Iniciar Sesión</a></li>
@@ -51,7 +53,7 @@
 				<img class="img-fluid no-spacing" src="{% static 'assets/images/header-img.jpg' %}" alt="Imagen de una biblioteca con el logo de Papiro&Tinta">
 			</div>
 			<div class="row position-absolute top-0 start-0 no-spacing bg-sgreen w-100">
-				<h2 class="text-center title-2 bg-sgreen no-spacing">ENVÍOS GRATIS A CUALQUIER PARTE DEL MUNDO</h2>
+				<h2 class="text-center l-text title-font bg-sgreen no-spacing">ENVÍOS GRATIS A CUALQUIER PARTE DEL MUNDO</h2>
 			</div>
 		</div>
 	</header>
@@ -59,7 +61,7 @@
 	<main class="px-lg-5">
         <div class="container d-flex flex-column align-items-center w-100 my-5 text-center b-2">
             <div class="row w-100">
-	            <h2 class="title-2 my-4">¡Bienvenido a Papiro & Tinta!</h2>
+	            <h2 class="l-text title-font my-4">¡Bienvenido a Papiro & Tinta!</h2>
 	            <p class="my-4">
 		            En <span class="title-font bold-text">Papiro & Tinta</span>, celebramos la magia de las palabras
 		            impresas y el mundo de los libros. Somos más que una librería en línea; somos un rincón acogedor
@@ -92,11 +94,16 @@
 			    <div class="col-md-2 d-none d-md-block"></div>
 				<div class="col-md-4">
 					<div class="container-fluid position-relative no-spacing">
-						<div class="row">
+						<div class="row no-spacing">
 							<img class="img-fluid" src="{% static 'assets/images/login-img.jpg' %}" alt="Imagen de libros abiertos con estróbilos encima">
 						</div>
-						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
+						<div class="row position-absolute top-50 start-50 translate-middle no-spacing w-100 text-center">
 							<div class="bg-sgreen p-3">
+								<span class="bold-text m-text title-font">¿YA TIENES UNA CUENTA?</span>
+							</div>
+						</div>
+						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
+							<div class="bg-sgray p-3">
 								<a class="btn secondary-btn no-decoration bold-text" href="{% url 'login_url' %}">Iniciar Sesión</a>
 							</div>
 						</div>
@@ -104,12 +111,17 @@
 				</div>
                 <div class="col-md-4 mt-md-0 mt-5">
 	                <div class="container-fluid position-relative no-spacing">
-						<div class="row">
+						<div class="row no-spacing">
 							<img class="img-fluid" src="{% static 'assets/images/register-img.jpg' %}" alt="Imagen de libros abiertos con estróbilos encima">
 						</div>
-						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
+		                <div class="row position-absolute top-50 start-50 translate-middle no-spacing w-100 text-center">
 							<div class="bg-sgreen p-3">
-								<a class="btn secondary-btn no-decoration bold-text" href="{% url 'register_url' %}">Registrarse</a>
+								<span class="bold-text m-text title-font">¿NUEVO?</span>
+							</div>
+						</div>
+						<div class="row position-absolute top-100 start-50 translate-middle no-spacing">
+							<div class="bg-sgray p-3">
+								<a class="btn secondary-btn no-decoration bold-text" href="{% url 'register_url' %}">&nbsp;Registrarse&nbsp;</a>
 							</div>
 						</div>
 					</div>
@@ -120,30 +132,30 @@
 		
         <div class="container d-flex flex-column align-items-center w-100 mt-7">
 	        <div class="row w-100 text-center">
-		        <h2 class="title-2">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
+		        <h2 class="l-text title-font">¿POR QUÉ COMPRAR EN PAPIRO & TINTA?</h2>
 	        </div>
 	        <div class="row w-100 text-center">
 		        <div class="col-12 col-md-3">
 			        <div class="d-flex flex-column align-items-center">
-				        <i class="bi bi-truck title-1"></i>
+				        <i class="fa-solid fa-truck-fast xl-text my-2"></i>
 				        <p class="bold-text">SERVICIO DE ENTREGA ÁGIL Y GRATIS</p>
 			        </div>
 		        </div>
 		        <div class="col-12 col-md-3">
 			        <div class="d-flex flex-column align-items-center">
-				        <i class="bi bi-credit-card title-1"></i>
+				        <i class="fa-solid fa-credit-card xl-text my-2"></i>
 				        <p class="bold-text">COMPRAS CÓMODAS Y 100% SEGURAS</p>
 			        </div>
 		        </div>
 		        <div class="col-12 col-md-3">
 			        <div class="d-flex flex-column align-items-center">
-				        <i class="bi bi-book-half title-1"></i>
+				        <i class="fa-solid fa-book xl-text my-2"><i class="fa-solid fa-arrow-rotate-left xl-text"></i></i>
 				        <p class="bold-text">DEVOLUCIONES FÁCILES Y RÁPIDAS</p>
 			        </div>
 		        </div>
 		        <div class="col-12 col-md-3">
 			        <div class="d-flex flex-column align-items-center">
-				        <i class="bi bi-bag-check title-1"></i>
+				        <i class="fa-solid fa-bag-shopping xl-text my-2"></i>
 				        <p class="bold-text">RECIBE EN CASA O RECOGE EN LA TIENDA</p>
 			        </div>
 		        </div>
@@ -152,7 +164,7 @@
 	
 		<div class="container d-flex flex-column align-items-center w-100 mt-6">
 			<div class="row w-100 text-center">
-				<h2 class="title-2 text-center">CONÓCENOS</h2>
+				<h2 class="l-text title-font">CONÓCENOS</h2>
 				<p class="my-4">
 					En <span class="title-font bold-text">Papiro & Tinta</span>, la lectura es más que una simple
 					afición; es un viaje inmersivo a través de las páginas del conocimiento, la imaginación y la
@@ -185,7 +197,7 @@
 	
 	<footer class="container-fluid mt-6 pt-3 tb-2 text-center bg-blue">
 		<div class="row w-100">
-			<h2 class="title-2">Papiro & Tinta</h2>
+			<h2 class="l-text title-font">Papiro & Tinta</h2>
 			<p class="text-center">La magia en cada página</p>
 		</div>
 		<div class="row w-100">
