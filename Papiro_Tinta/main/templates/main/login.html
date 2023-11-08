@@ -31,7 +31,7 @@
 				<div class="col-md-auto align-self-center" id="login-box">
 					<h1 class="xl-text title-font">Iniciar Sesión</h1>
 					<h2 class="l-text title-font">Papiro & Tinta</h2>
-			        <form class="py-4" id="login-form" method="post">
+			        <form class="py-4" method="post" action="">
 				        {% csrf_token %}
 				        <div class="form-floating mb-3">
 					        <input type="email" class="form-control primary-input" id="floatingEmail" name="email" placeholder="nombre@example.com" required pattern="[^@\s]+@(?!.*\.{2,})(?!.*-{2,})[^@\s]+\.[a-zA-Z]{2,}" title="No es un correo electrónico válido.">

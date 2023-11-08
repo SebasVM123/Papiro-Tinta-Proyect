@@ -4,4 +4,5 @@ from .models import cliente
 class clienteForm(forms.ModelForm):
     class Meta:
         model = cliente
-        fields = '__all__'
+        fields = ['dni', 'nombre', 'apellido', 'fecha_nacimiento', 'email', 'contraseña', 'direccion', 'ciudad',
+                  'provincia', 'pais',]

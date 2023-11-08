@@ -11,4 +11,6 @@ urlpatterns = [
     path('', views.index_view, name='index'),
     path('iniciar-sesion', views.login_view, name='login_url'),
     path('registrarse', views.register_view, name='register_url'),
+    path('home/', views.home_view, name='home_url'),
+    path('home/mi-perfil', views.client_profile_view, name='client_profile_url')
 ]
