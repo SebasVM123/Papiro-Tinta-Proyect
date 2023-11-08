@@ -3,6 +3,7 @@ from django.db import models
 
 class cliente(models.Model):
     id = models.AutoField(primary_key=True)
+    dni = models.IntegerField()
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     contraseña = models.CharField(max_length=50)
