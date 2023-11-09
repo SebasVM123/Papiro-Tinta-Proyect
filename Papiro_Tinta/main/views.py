@@ -31,9 +31,7 @@ def register_view(request):
     if request.method == 'POST':
         form = clienteForm(request.POST)
         if form.is_valid():
-            new_client = form.save(commit=False)
-            new_client.fecha_registro = timezone.now()
-            new_client.save()
+            new_client = form.save()
 
             return redirect('login_url')
         else:

@@ -132,6 +132,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTHENTICATION_BACKENDS = [
-    'main.backends.EmailBackend',  # Reemplaza 'tu_app' con el nombre de tu app
     'django.contrib.auth.backends.ModelBackend',
 ]

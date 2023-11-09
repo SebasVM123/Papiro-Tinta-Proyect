@@ -4,7 +4,7 @@ from django.contrib import admin
 
 from . import views
 
-from . import views2
+#from . import views2
 #from .views import crear_registro
 
 urlpatterns = [
